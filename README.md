@@ -21,7 +21,12 @@ Run vimogen without arguments:
 
     $ vimogen
 
-It will give you a menu of items to choose from. Such as 'Install' or 'Update'.
+It will give you a menu of items to choose from. Such as 'Install' or 'Update':
+
+    1) Install
+    2) Update
+    3) Exit
+    Select a menu option to perform: 1
 
 If you choose Install, then it will a 'git clone' on all the git repositories 
 that you specified in ~/.vimogen_repos into your Pathogen dir (~/.vim/bundle).

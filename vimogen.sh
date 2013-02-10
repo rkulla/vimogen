@@ -1,5 +1,6 @@
 #!/bin/bash
 # vimogen.sh by Ryan Kulla <rkulla@gmail.com>
+# version 1.0
 
 install_dir="$HOME/.vim/bundle"
 manifest_file="$HOME/.vimogen_repos"
