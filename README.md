@@ -1,6 +1,6 @@
 
-Vimogen is a Pathogen bundle manager that manages the installing/deleting/updating
-of all your Vim plugins. 
+Vimogen is a zero-configuration Pathogen bundle manager that manages the 
+installing/deleting/updating of all your Vim plugins.
 
 Because of these abilities, Vimogen also makes it very easy to keep all your Vim
 plugins synchronized across different machines.
