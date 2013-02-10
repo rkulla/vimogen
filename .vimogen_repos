@@ -13,5 +13,6 @@ git://github.com/tsaleh/vim-matchit.git
 git://github.com/vim-scripts/taglist.vim.git
 git://github.com/godlygeek/tabular.git
 git://github.com/vim-scripts/tComment.git
+git://github.com/digitaltoad/vim-jade
 git://github.com/klen/python-mode.git
 git://github.com/rkulla/pydiction.git
