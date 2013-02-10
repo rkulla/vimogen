@@ -7,7 +7,9 @@ Simply create a manifest file in your home directory called .vimogen_repos
 and put full paths to git repos to vim plugins in it, one line at a time:
     
     git://github.com/tpope/vim-surround.git
+    git://github.com/tpope/vim-rails.git
     git://github.com/scrooloose/nerdtree.git
+    git://github.com/godlygeek/tabular.git
     ...
 
 and run vimogen and it will give you the option to install or update. This
@@ -26,6 +28,7 @@ of just git repositories. (See the supplied example)
 
 Next:
 
+    chmod u+x vimogen.sh
     mv vimogen.sh ~/bin/vimogen 
     
 or put it somewhere else in your $PATH if you don't like ~/bin.
