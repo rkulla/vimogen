@@ -47,6 +47,10 @@ Create a manifest file called $HOME/.vimogen_repos that consists
 of just git repositories. I supplied an example .vimogen_repos file
 which contains the plugins that I like to use. Make up your own, though.
 
+Note that Vimogen wil auto-enerate $HOME/.vimogen_repos if you run it
+without creating the file first. It will genereate it based off the
+current pathogen bundles already you have, if any.
+
 Then:
 
     git clone git://github.com/rkulla/vimogen.git

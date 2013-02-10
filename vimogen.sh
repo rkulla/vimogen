@@ -1,6 +1,7 @@
 #!/bin/bash
 # vimogen.sh by Ryan Kulla <rkulla@gmail.com>
-# version 1.1
+# version 1.2
+# License: BSD
 
 install_dir="$HOME/.vim/bundle"
 manifest_file="$HOME/.vimogen_repos"
@@ -11,6 +12,21 @@ usage() {
     exit
 }
 
+generate_manifest() {
+    pushd . > /dev/null
+
+    cd "$install_dir"
+    for i in $(ls); do 
+        pushd . > /dev/null
+        cd "$i" 
+        local url=$(git remote -v | perl -ne 'print $1 if /^origin\s(.*)\s\(fetch\)/')
+        echo "$url" >> "$manifest_file"
+        popd > /dev/null
+    done
+
+    popd > /dev/null
+}
+
 validate_environment() {
     if [[ ! -d "$install_dir" ]]; then
         printf "$install_dir doesn't exist. Please create it first.\n"
@@ -18,8 +34,9 @@ validate_environment() {
     fi
 
     if [[ ! -f "$manifest_file" ]]; then
-        printf "$manifest_file doesn't exist. Please create it first.\n"
-        exit 0
+        printf "$manifest_file doesn't exist. Generating...\n"
+        generate_manifest
+        # exit 0
     fi
 }
 
