@@ -35,8 +35,8 @@ Q: Is vimogen the best way to manage Pathogen bundles?
 A: I don't know. I just evolved the way I was handling it into this script.
 There are other ways to handle the automation of installing Vim plugins
 via pathogen -- such as making your entire .vim directory a git repo and
-then making the plugin directories git submodules -- but I prefer this
-simpler method I created.
+then making the plugin directories git submodules. There's also another
+project someone created called Vundle, but I prefer this simpler method I made.
 
 Requirements
 ============
@@ -46,6 +46,8 @@ Vim and the [Pathogen](https://github.com/tpope/vim-pathogen/ "Pathogen") plugin
 
 Installation
 ============
+Installation is optional.
+
 Create a manifest file called $HOME/.vimogen_repos that consists
 of just git repositories. I supplied an example .vimogen_repos file
 which contains the plugins that I like to use. Make up your own, though.
