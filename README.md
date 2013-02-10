@@ -35,6 +35,12 @@ via pathogen -- such as making your entire .vim directory a git repo and
 then making the plugin directories git submodules -- but I prefer this
 simpler method I created.
 
+Requirements
+============
+A Unix-like system (Linux, OS X, etc.) running the Bash shell.
+
+Vim and the [Pathogen](https://github.com/tpope/vim-pathogen/ Pathogen) plugin.
+
 Installation
 ============
 Create a manifest file called $HOME/.vimogen_repos that consists
