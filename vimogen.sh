@@ -6,7 +6,7 @@ manifest_file="$HOME/.vimogen_repos"
 
 usage() {
     printf "Usage:\n"
-    printf "vimogen [install|update]\n\n" 
+    printf "vimogen\n\n" 
     exit
 }
 
@@ -51,6 +51,18 @@ install() {
 
 update() {
     printf "Updating...\n"
+    pushd . > /dev/null
+
+    cd "$install_dir"
+    for i in $(ls); do 
+        pushd . > /dev/null
+        cd "$i" 
+        git pull --verbose
+        popd > /dev/null
+    done
+
+    popd > /dev/null
+
     exit 0
 }
 
