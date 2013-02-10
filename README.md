@@ -6,7 +6,8 @@ Because of these abilities, Vimogen also makes it very easy to keep all your Vim
 plugins synchronized across different machines.
 
 Simply create a manifest file in your home directory called .vimogen_repos 
-and put full paths to git repos to vim plugins in it, one line at a time:
+(or let vimogen generate one for you) and put full paths to git repos to vim 
+plugins in it, one line at a time:
     
     git://github.com/tpope/vim-surround.git
     git://github.com/tpope/vim-rails.git
