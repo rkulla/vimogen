@@ -1,7 +1,18 @@
 
 Vimogen is an opinionated shell script that believes you should install
 your Vim plugins via Pathogen bundles/git repos and automates installing
-and updating your bundles.
+and updating of them. 
+
+Simply create a manifest file in your home directory called .vimogen_repos 
+and put full paths to git repos to vim plugins in it, one line at a time:
+    
+    git://github.com/tpope/vim-surround.git
+    git://github.com/scrooloose/nerdtree.git
+    ...
+
+and run vimogen and it will give you the option to install or update. This
+allows you to set up a your Vim installation on a new computer very quickly
+and it allows you to keep all your Vim plugins up-to-date very easily.
 
 There are other ways to handle the automation of installing Vim plugins
 via pathogen -- such as making your entire .vim directory a git repo and
