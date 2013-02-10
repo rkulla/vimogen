@@ -1,7 +1,7 @@
 #!/bin/bash
 # vimogen.sh by Ryan Kulla <rkulla@gmail.com>
 # version 1.2
-# License: BSD
+# License: Vim License. See :help license
 
 install_dir="$HOME/.vim/bundle"
 manifest_file="$HOME/.vimogen_repos"
@@ -36,7 +36,6 @@ validate_environment() {
     if [[ ! -f "$manifest_file" ]]; then
         printf "$manifest_file doesn't exist. Generating...\n"
         generate_manifest
-        # exit 0
     fi
 }
 

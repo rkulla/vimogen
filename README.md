@@ -49,7 +49,7 @@ which contains the plugins that I like to use. Make up your own, though.
 
 Note that Vimogen wil auto-enerate $HOME/.vimogen_repos if you run it
 without creating the file first. It will genereate it based off the
-current pathogen bundles already you have, if any.
+current pathogen bundles you already have, if any.
 
 Then:
 
@@ -91,3 +91,7 @@ If you choose Uninstall, it will give you a list of all your plugins to choose f
 If you choose Update, then it will run a 'git pull' on all of your bundles. 
 This is great because you can stay up-to-date with all the new features the 
 plugin authors create just by re-running this command often.
+
+License
+=======
+Copyright (c) Ryan Kulla. Distributed under the same terms as Vim itself. See :help license
