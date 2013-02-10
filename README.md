@@ -44,6 +44,8 @@ A Unix-like system (Linux, OS X, etc.) running the Bash shell.
 
 Vim and the [Pathogen](https://github.com/tpope/vim-pathogen/ "Pathogen") plugin.
 
+Git.
+
 Installation
 ============
 Installation is optional.
