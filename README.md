@@ -21,10 +21,14 @@ simpler method I created.
 
 Installation
 ============
-Create a manifest file called $HOME/.vimogen_repos that conists
+Create a manifest file called $HOME/.vimogen_repos that consists
 of just git repositories. (See the supplied example)
 
-Then mv vimogen.sh ~/bin/vimogen (or somewhere in your $PATH)
+Next:
+
+    mv vimogen.sh ~/bin/vimogen 
+    
+or put it somewhere else in your $PATH if you don't like ~/bin.
 
 Usage
 =====
