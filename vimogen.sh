@@ -1,6 +1,6 @@
 #!/bin/bash
 # vimogen.sh by Ryan Kulla <rkulla@gmail.com>
-# version 1.0
+# version 1.1
 
 install_dir="$HOME/.vim/bundle"
 manifest_file="$HOME/.vimogen_repos"
@@ -50,6 +50,46 @@ install() {
     exit 0
 }
 
+uninstall() {
+    printf "Uninstalling...\n"
+    pushd . > /dev/null
+    local install_count=0
+    local plugins=()
+
+    while read -r line; do
+        local basename=${line##*/}
+        local clone_dir="${basename%.*}"
+        if [[ -d "$install_dir/$clone_dir" ]]; then
+            plugins+=( "$clone_dir" )
+            install_count=$(( install_count+1 ))
+        fi
+    done < "$manifest_file"
+
+    PS3="Select a plugin to completely uninstall: "
+    select option in "EXIT" "${plugins[@]}"
+    do
+        case "$option" in
+            EXIT) 
+                if [[ "$option" -eq "EXIT" ]]; then
+                    printf "exiting\n"
+                    exit 0
+                fi
+                ;;
+            *)
+                if [[ ! -z "$option" ]]; then
+                    printf "Uninstalling [$option]\n"
+                    rm -rf "$install_dir/$option"
+                    uninstall
+                else
+                    printf "Invalid selection\n"
+                fi
+                ;;
+        esac
+    done
+
+    exit 0
+}
+
 update() {
     printf "Updating...\n"
     pushd . > /dev/null
@@ -69,11 +109,14 @@ update() {
 
 get_menu_opt() {
     PS3="Select a menu option to perform: "
-    select option in Install Update Exit
+    select option in Install Uninstall Update Exit
     do
         case "$option" in
             Install) 
                 install
+                ;;
+            Uninstall) 
+                uninstall
                 ;;
             Update) 
                 update

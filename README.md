@@ -16,10 +16,19 @@ and run vimogen and it will give you the option to install or update. This
 allows you to set up a your Vim installation on a new computer very quickly
 and it allows you to keep all your Vim plugins up-to-date very easily.
 
-If you don't know what pathogen is, it's become the de-facto standard way of
-installing Vim plugins because it makes it very easy to keep them modular
-and as git repositories. See https://github.com/tpope/vim-pathogen
+Q: What is pathogen?
 
+A: Pathogen has become the de-facto standard way of installing Vim plugins
+because it makes it very easy to keep them modular and as git repositories.
+See https://github.com/tpope/vim-pathogen
+
+Q: Where can I find git URLs for Vim plugins?
+
+A: All the plugins from vim.org are mirrored on https://github.com/vim-scripts
+
+Q: Is vimogen the best way to manage Pathogen bundles?
+
+A: I don't know. I just evolved the way I was handling it into this script.
 There are other ways to handle the automation of installing Vim plugins
 via pathogen -- such as making your entire .vim directory a git repo and
 then making the plugin directories git submodules -- but I prefer this
