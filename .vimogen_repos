@@ -1,0 +1,17 @@
+git://github.com/tpope/vim-rails.git
+git://github.com/tpope/vim-surround.git
+git://github.com/scrooloose/nerdtree.git
+git://github.com/kien/ctrlp.vim.git
+git://github.com/garbas/vim-snipmate.git
+git://github.com/tomtom/tlib_vim.git
+git://github.com/MarcWeber/vim-addon-mw-utils.git
+git://github.com/honza/snipmate-snippets.git
+git://github.com/vim-scripts/ZenCoding.vim.git
+git://github.com/vim-scripts/vcscommand.vim.git
+git://github.com/vim-scripts/dbext.vim.git
+git://github.com/tsaleh/vim-matchit.git
+git://github.com/vim-scripts/taglist.vim.git
+git://github.com/godlygeek/tabular.git
+git://github.com/vim-scripts/tComment.git
+git://github.com/klen/python-mode.git
+git://github.com/rkulla/pydiction.git
