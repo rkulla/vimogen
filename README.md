@@ -1,7 +1,7 @@
 
 Vimogen is an opinionated shell script that believes you should install
-your Vim plugins via Pathogen bundles/git repos and automates installing
-and updating of them. 
+your Vim plugins via Pathogen bundles/git repos and automates the 
+installing, uninstalling and updating of them. 
 
 Simply create a manifest file in your home directory called .vimogen_repos 
 and put full paths to git repos to vim plugins in it, one line at a time:
@@ -12,9 +12,9 @@ and put full paths to git repos to vim plugins in it, one line at a time:
     git://github.com/godlygeek/tabular.git
     ...
 
-and run vimogen and it will give you the option to install or update. This
-allows you to set up a your Vim installation on a new computer very quickly
-and it allows you to keep all your Vim plugins up-to-date very easily.
+Running vimogen will give you the option to install, update, or uninstall. 
+This allows you to set up a your Vim installation on a new computer very 
+quickly and it allows you to keep all your Vim plugins up-to-date very easily.
 
 Q: What is pathogen?
 
@@ -55,15 +55,26 @@ Run vimogen without arguments:
 It will give you a menu of items to choose from. Such as 'Install' or 'Update':
 
     1) Install
-    2) Update
-    3) Exit
-    Select a menu option to perform: 1
+    2) Uninstall
+    3) Update
+    4) Exit
+    Select a menu option to perform: 
 
 If you choose Install, then it will a 'git clone' on all the git repositories 
 that you specified in ~/.vimogen_repos into your Pathogen dir (~/.vim/bundle).
 It will skip any directories that already exist, so you can append new plugins
 to the vimogen_repos manifest later and install them too.
 
+If you choose Uninstall, it will give you a list of all your plugins to chose from:
+
+    1) EXIT              7) tlib_vim            13) vim-matchit
+    2) vim-rails         8) vim-addon-mw-utils  14) taglist.vim
+    3) vim-surround      9) snipmate-snippets   15) tabular
+    4) nerdtree         10) ZenCoding.vim       16) tComment
+    5) ctrlp.vim        11) vcscommand.vim      17) python-mode
+    6) vim-snipmate     12) dbext.vim           18) pydiction
+    Select a plugin to completely uninstall:
+    
 If you choose Update, then it will run a 'git pull' on the bundles. This is 
 great because you can stay up-to-date with all the new features the plugin
 authors create just by re-running this command often.

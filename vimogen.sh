@@ -51,7 +51,6 @@ install() {
 }
 
 uninstall() {
-    printf "Uninstalling...\n"
     pushd . > /dev/null
     local install_count=0
     local plugins=()
