@@ -14,9 +14,10 @@ and put full paths to git repos to vim plugins in it, one line at a time:
     git://github.com/godlygeek/tabular.git
     ...
 
-Running vimogen will give you the option to install, update, or uninstall. 
-This allows you to set up a your Vim installation on a new computer very 
-quickly and it allows you to keep all your Vim plugins up-to-date very easily.
+Running vimogen will give you the option to install, update, or uninstall
+the Vim plugins you like to use. This allows you to set up a your Vim 
+installation on a new computer very quickly and it allows you to keep all 
+your Vim plugins up-to-date very easily.
 
 Q: What is pathogen?
 
