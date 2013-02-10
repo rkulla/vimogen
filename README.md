@@ -33,4 +33,6 @@ that you specified in ~/.vimogen_repos into your Pathogen dir (~/.vim/bundle).
 It will skip any directories that already exist, so you can append new plugins
 to the vimogen_repos manifest later and install them too.
 
-If you choose Update, then it will run a 'git pull' on the bundles.
+If you choose Update, then it will run a 'git pull' on the bundles. This is 
+great because you can stay up-to-date with all the new features the plugin
+authors create just by re-running this command often.
