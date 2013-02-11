@@ -23,12 +23,18 @@ Q: What is pathogen?
 A: Pathogen has become the de-facto standard way of activating Vim plugins
 that were installed in modular way into their own directories, rather than
 simply unzip'ing plugins all into the same directory like old times.
-Vimogen assumes you're using Pathogen, so install Pathogen first.  See:
-https://github.com/tpope/vim-pathogen
+Vimogen assumes you're using Pathogen. So install Pathogen first, which is
+as easy as following the simple steps on https://github.com/tpope/vim-pathogen
 
 Q: Where can I find git URLs for Vim plugins?
 
-A: All the plugins from vim.org are mirrored on https://github.com/vim-scripts
+A: All of the plugins from vim.org are mirrored on https://github.com/vim-scripts
+
+Q: I downloaded a Vim plugin as a .zip file. What should I do?
+
+A: Delete it. Vimogen doesn't use zip files it uses git repositories. All of
+the plugins from vim.org are mirrored on https://github.com/vim-scripts so
+find it on there and put the remote repository URl into ~/.pathogen_repos.
 
 Q: Is Vimogen the best way to manage Pathogen bundles?
 
