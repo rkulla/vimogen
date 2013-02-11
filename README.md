@@ -1,10 +1,6 @@
 
 Vimogen is perhaps the easiest way to install, remove, or update Vim plugins.
 
-Before reading on note that it only works if you use *nix (OSX/Linux/etc) & Bash.
-So it will not work if you use Windows or Zsh, for example. Feel free to fork it
-and make it work on Windows or other shells besides bash if you want to, though!
-
 Requiring zero-configuration, vimogen is essentially a Pathogen bundle manager
 that manages the installing/deleting/updating of all your Vim plugins. It also
 makes it easy to keep all of your Vim plugins synchronized across different
@@ -58,6 +54,9 @@ A Unix-like system (Linux, OS X, etc.) running the Bash shell.
 Vim and the [Pathogen](https://github.com/tpope/vim-pathogen/ "Pathogen") plugin.
 
 Git.
+
+So it will not work if you use Windows or Zsh, for example. Feel free to fork it
+and make it work on Windows or other shells besides bash if you want to, though!
 
 Installation
 ============
