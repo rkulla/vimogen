@@ -72,21 +72,21 @@ Run vimogen without arguments:
 
     $ vimogen
 
-It will give you a menu of items to choose from. Such as 'Install' or 'Update':
+It will give you a menu of items to choose from:
 
     1) Install
     2) Uninstall
     3) Update
     4) Exit
-    Select a menu option to perform: 
+    Select a menu option to perform: 1
 
-If you choose Install, then it will a 'git clone' on all the git repositories 
+If you choose __Install__, then it will a _git clone_ on all the git repositories 
 that you specified in ~/.vimogen_repos into your Pathogen dir (~/.vim/bundle).
 It will skip any directories that already exist. You can also append new plugin
 repos to the .vimogen_repos file later and install them incrementally by re-
 running Vimogen's install command.
 
-If you choose Uninstall, it will give you a list of all your plugins to choose from:
+If you choose __Uninstall__, it will give you a list of all your plugins to choose from:
 
     1) EXIT              7) tlib_vim            13) vim-matchit
     2) vim-rails         8) vim-addon-mw-utils  14) taglist.vim
@@ -96,7 +96,7 @@ If you choose Uninstall, it will give you a list of all your plugins to choose f
     6) vim-snipmate     12) dbext.vim           18) pydiction
     Select a plugin to completely uninstall:
     
-If you choose Update, then it will run a 'git pull' on all of your bundles. 
+If you choose __Update__, then it will run a _git pull_ on all of your bundles. 
 This is great because you can stay up-to-date with all the new features the 
 plugin authors create just by re-running this command often.
 
