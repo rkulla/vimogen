@@ -82,8 +82,8 @@ It will give you a menu of items to choose from. Such as 'Install' or 'Update':
 
 If you choose Install, then it will a 'git clone' on all the git repositories 
 that you specified in ~/.vimogen_repos into your Pathogen dir (~/.vim/bundle).
-It will skip any directories that already exist, so you can append new plugins
-to the vimogen_repos manifest later and install them too.
+It will skip any directories that already exist. You can also append new plugin
+repos to the .vimogen_repos file later and install them incrementally.
 
 If you choose Uninstall, it will give you a list of all your plugins to choose from:
 
