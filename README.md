@@ -30,7 +30,7 @@ Q: Where can I find git URLs for Vim plugins?
 
 A: All the plugins from vim.org are mirrored on https://github.com/vim-scripts
 
-Q: Is vimogen the best way to manage Pathogen bundles?
+Q: Is Vimogen the best way to manage Pathogen bundles?
 
 A: I don't know. I just evolved the way I was handling it into this script.
 There are other ways to handle the automation of installing Vim plugins
@@ -83,7 +83,8 @@ It will give you a menu of items to choose from. Such as 'Install' or 'Update':
 If you choose Install, then it will a 'git clone' on all the git repositories 
 that you specified in ~/.vimogen_repos into your Pathogen dir (~/.vim/bundle).
 It will skip any directories that already exist. You can also append new plugin
-repos to the .vimogen_repos file later and install them incrementally.
+repos to the .vimogen_repos file later and install them incrementally by re-
+running Vimogen's install command.
 
 If you choose Uninstall, it will give you a list of all your plugins to choose from:
 
