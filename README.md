@@ -1,7 +1,14 @@
 
-Vimogen is a zero-configuration Pathogen bundle manager that manages the 
-installing/deleting/updating of all your Vim plugins. It also makes it
-easy to keep all of your Vim plugins synchronized across different machines.
+Vimogen is perhaps the easiest way to install, remove, or update Vim plugins.
+
+Before reading on note that it only works if you use *nix (OSX/Linux/etc) & Bash.
+So it will not work if you use Windows or Zsh, for example. Feel free to fork it
+and make it work on Windows or other shells besides bash if you want to, though!
+
+Requiring zero-configuration, vimogen is essentially a Pathogen bundle manager
+that manages the installing/deleting/updating of all your Vim plugins. It also
+makes it easy to keep all of your Vim plugins synchronized across different
+machines.
 
 Simply create a manifest file in your home directory called .vimogen_repos 
 (or let vimogen generate one for you) and put git URLs to Vim plugins in 
@@ -22,7 +29,7 @@ Q: What is pathogen?
 
 A: Pathogen has become the de-facto standard way of activating Vim plugins
 that were installed in modular way into their own directories, rather than
-simply unzip'ing plugins all into the same directory like old times.
+simply unzip'ing all plugins into the same directory like old times.
 Vimogen assumes you're using Pathogen. So install Pathogen first, which is
 as easy as following the simple steps on https://github.com/tpope/vim-pathogen
 
