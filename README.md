@@ -39,13 +39,21 @@ A: Delete it. Vimogen doesn't use zip files, it uses git repositories. All of
 the plugins from vim.org are mirrored on https://github.com/vim-scripts so
 find it on there and put the remote repository URL into ~/.pathogen_repos.
 
-Q: Is Vimogen the best way to manage Pathogen bundles?
+Q: What does zero-configuration mean?
 
-A: I don't know. I just evolved the way I was handling it into this script.
-There are other ways to handle the automation of installing Vim plugins
-via pathogen -- such as making your entire .vim directory a git repo and
-then making the plugin directories git submodules. There are also other
-plugin managers such as Vundle. I find Vimogen to be the simplest method.
+A: I mean it in the sense of not having to modify your vimrc file at all in
+order to use Vimogen. To be fair, if you don't already have Pathogen installed
+then adding a one line configuration that it requires to your vimrc is still
+necessary. Also, if ~/bin isn't in your system $PATH yet you'll need to add it
+in your bashrc, or equivalent, but that is more of an optional installation step.
+
+Q: Is Vimogen really the easiest way to manage Vim plugins?
+
+A: I think so. I evolved the way I was handling it into this script. There
+are other ways to handle the automation of installing Vim plugins via 
+pathogen -- such as making your entire .vim directory a git repo and then
+making the plugin directories git submodules. There are also other plugin
+managers such as Vundle. I find Vimogen to be the easiest method I've seen. 
 
 Requirements
 ============
