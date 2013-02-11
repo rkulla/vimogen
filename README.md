@@ -80,13 +80,13 @@ It will give you a menu of items to choose from:
     4) Exit
     Select a menu option to perform: 1
 
-If you choose __Install__, then it will a _git clone_ on all the git repositories 
+* If you choose __Install__, then it will a _git clone_ on all the git repositories 
 that you specified in ~/.vimogen_repos into your Pathogen dir (~/.vim/bundle).
 It will skip any directories that already exist. You can also append new plugin
 repos to the .vimogen_repos file later and install them incrementally by re-
 running Vimogen's install command.
 
-If you choose __Uninstall__, it will give you a list of all your plugins to choose from:
+* If you choose __Uninstall__, it will give you a list of all your plugins to choose from:
 
     1) EXIT                  8) tabular             15) vim-matchit
     2) ctrlp                 9) taglist             16) vim-rails
@@ -98,7 +98,7 @@ If you choose __Uninstall__, it will give you a list of all your plugins to choo
     Select a plugin to completely uninstall:
 
     
-If you choose __Update__, then it will run a _git pull_ on all of your bundles. 
+* If you choose __Update__, then it will run a _git pull_ on all of your bundles. 
 This is great because you can stay up-to-date with all the new features the 
 plugin authors create just by re-running this command often.
 
