@@ -17,14 +17,16 @@ plugins in it, one line at a time:
 
 Running vimogen will give you the option to install, update, or uninstall
 the Vim plugins you like to use. This allows you to set up a your Vim 
-installation on a new computer very quickly and it allows you to keep all 
+installation on a new computer very quickly and allows you to keep all of
 your Vim plugins up-to-date very easily.
 
 Q: What is pathogen?
 
-A: Pathogen has become the de-facto standard way of installing Vim plugins
-because it makes it very easy to keep them modular and as git repositories.
-See https://github.com/tpope/vim-pathogen
+A: Pathogen has become the de-facto standard way of activating Vim plugins
+that were installed in modular way into their own directories, rather than
+simply unzip'ing plugins all into the same directory like old times.
+Vimogen assumes you're using Pathogen, so install Pathogen first.  See:
+https://github.com/tpope/vim-pathogen
 
 Q: Where can I find git URLs for Vim plugins?
 
@@ -35,8 +37,8 @@ Q: Is Vimogen the best way to manage Pathogen bundles?
 A: I don't know. I just evolved the way I was handling it into this script.
 There are other ways to handle the automation of installing Vim plugins
 via pathogen -- such as making your entire .vim directory a git repo and
-then making the plugin directories git submodules. There's also another
-project someone created called Vundle, but I prefer this simpler method I made.
+then making the plugin directories git submodules. There's are other plugin
+managers such as Vundle, but I prefer the simple method of using Vimogen.
 
 Requirements
 ============
