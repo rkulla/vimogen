@@ -32,7 +32,7 @@ and make it work on Windows or other shells besides bash if you want to, though!
 
 Installation
 ============
-Installation is mostly optional.
+Installation is optional and is as simple as installing a shell script.
 
 Create a manifest file called $HOME/.vimogen_repos that consists
 of just git repositories. I supplied a ample .vimogen_repos file
@@ -126,11 +126,14 @@ in your bashrc, or equivalent, but that is more of an optional installation step
 
 Q: Is Vimogen really the easiest way to manage Vim plugins?
 
-A: I think so. I evolved the way I was handling it into this script. There
-are other ways to handle the automation of installing Vim plugins via 
+A: I think so. I evolved the way I was handling it into this script. Vimogen
+doesn't require adding anything to your .vimrc file or .vim directory. 
+
+There are other ways to handle the automation of installing Vim plugins via 
 pathogen -- such as making your entire .vim directory a git repo and then
 making the plugin directories git submodules. There are also other plugin
-managers such as Vundle. I find Vimogen to be the easiest method I've seen. 
+managers such as Vundle but they require installation and configuration. I
+find Vimogen to be the easiest method I've seen. 
 
 License
 =======
