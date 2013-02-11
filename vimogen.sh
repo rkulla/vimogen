@@ -89,7 +89,7 @@ uninstall() {
 
     local sorted_plugins=($(printf '%s\n' "${plugins[@]}"|sort -f))
 
-    PS3="Select a plugin to completely uninstall: "
+    PS3="Enter the number of the plugin you wish to uninstall: "
     select option in "EXIT" "${sorted_plugins[@]}"
     do
         case "$option" in
@@ -137,7 +137,7 @@ update() {
 }
 
 get_menu_opt() {
-    PS3="Select a menu option to perform: "
+    PS3="Enter the number of the menu option to perform: "
     select option in Install Uninstall Update Exit
     do
         case "$option" in
