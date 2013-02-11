@@ -32,9 +32,9 @@ A: All of the plugins from vim.org are mirrored on https://github.com/vim-script
 
 Q: I downloaded a Vim plugin as a .zip file. What should I do?
 
-A: Delete it. Vimogen doesn't use zip files it uses git repositories. All of
+A: Delete it. Vimogen doesn't use zip files, it uses git repositories. All of
 the plugins from vim.org are mirrored on https://github.com/vim-scripts so
-find it on there and put the remote repository URl into ~/.pathogen_repos.
+find it on there and put the remote repository URL into ~/.pathogen_repos.
 
 Q: Is Vimogen the best way to manage Pathogen bundles?
 
