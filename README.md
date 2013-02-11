@@ -93,7 +93,7 @@ If you choose __Uninstall__, it will give you a list of all your plugins to choo
     3) vim-surround      9) snipmate-snippets   15) tabular
     4) nerdtree         10) ZenCoding           16) tComment
     5) ctrlp            11) vcscommand          17) python-mode
-    6) vim-snipmate     12) dbext.vim           18) pydiction
+    6) vim-snipmate     12) dbext               18) pydiction
     Select a plugin to completely uninstall:
     
 If you choose __Update__, then it will run a _git pull_ on all of your bundles. 
