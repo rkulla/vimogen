@@ -50,7 +50,11 @@ install() {
         local basename=${line##*/}
         local clone_dir="${basename%.*}"
         if [[ ! -d "$install_dir/$clone_dir" ]]; then
-            git clone "$line"
+            if [[ "$line" = *.vim* ]]; then
+                git clone "$line" "${clone_dir%.*}"
+            else 
+                git clone "$line" "$clone_dir"
+            fi
             install_count=$(( install_count+1 ))
         fi
     done < "$manifest_file"
@@ -74,6 +78,9 @@ uninstall() {
     while read -r line; do
         local basename=${line##*/}
         local clone_dir="${basename%.*}"
+        if [[ "$line" = *.vim* ]]; then
+            clone_dir="${clone_dir%.*}"
+        fi
         if [[ -d "$install_dir/$clone_dir" ]]; then
             plugins+=( "$clone_dir" )
             install_count=$(( install_count+1 ))
