@@ -88,13 +88,15 @@ running Vimogen's install command.
 
 If you choose __Uninstall__, it will give you a list of all your plugins to choose from:
 
-    1) EXIT              7) tlib_vim            13) vim-matchit
-    2) vim-rails         8) vim-addon-mw-utils  14) taglist
-    3) vim-surround      9) snipmate-snippets   15) tabular
-    4) nerdtree         10) ZenCoding           16) tComment
-    5) ctrlp            11) vcscommand          17) python-mode
-    6) vim-snipmate     12) dbext               18) pydiction
+    1) EXIT                  8) tabular             15) vim-matchit
+    2) ctrlp                 9) taglist             16) vim-rails
+    3) dbext                10) tComment            17) vim-repeat
+    4) nerdtree             11) tlib_vim            18) vim-snipmate
+    5) pydiction            12) vcscommand          19) vim-surround
+    6) python-mode          13) vim-addon-mw-utils  20) ZenCoding
+    7) snipmate-snippets    14) vim-jade
     Select a plugin to completely uninstall:
+
     
 If you choose __Update__, then it will run a _git pull_ on all of your bundles. 
 This is great because you can stay up-to-date with all the new features the 

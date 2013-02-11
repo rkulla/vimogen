@@ -87,8 +87,10 @@ uninstall() {
         fi
     done < "$manifest_file"
 
+    local sorted_plugins=($(printf '%s\n' "${plugins[@]}"|sort -f))
+
     PS3="Select a plugin to completely uninstall: "
-    select option in "EXIT" "${plugins[@]}"
+    select option in "EXIT" "${sorted_plugins[@]}"
     do
         case "$option" in
             EXIT) 
