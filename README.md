@@ -1,13 +1,11 @@
 
 Vimogen is a zero-configuration Pathogen bundle manager that manages the 
-installing/deleting/updating of all your Vim plugins.
-
-Because of these abilities, Vimogen also makes it very easy to keep all your Vim
-plugins synchronized across different machines.
+installing/deleting/updating of all your Vim plugins. It also makes it
+easy to keep all of your Vim plugins synchronized across different machines.
 
 Simply create a manifest file in your home directory called .vimogen_repos 
-(or let vimogen generate one for you) and put full paths to git repos to vim 
-plugins in it, one line at a time:
+(or let vimogen generate one for you) and put git URLs to Vim plugins in 
+it, one line at a time, like:
     
     git://github.com/tpope/vim-surround.git
     git://github.com/tpope/vim-rails.git
@@ -16,10 +14,10 @@ plugins in it, one line at a time:
     ...
 
 Running vimogen will give you the option to install, update, or uninstall
-the Vim plugins you like to use. This allows you to set up a your Vim 
-installation on a new computer very quickly and allows you to keep all of
-your Vim plugins up-to-date very easily.
+the Vim plugins you use. 
 
+FAQ
+===
 Q: What is pathogen?
 
 A: Pathogen has become the de-facto standard way of activating Vim plugins
