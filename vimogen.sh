@@ -1,6 +1,6 @@
 #!/bin/bash
 # vimogen.sh by Ryan Kulla <rkulla@gmail.com>
-# version 1.2
+# version 1.3
 # License: Vim License. See :help license
 
 install_dir="$HOME/.vim/bundle"
@@ -49,12 +49,11 @@ install() {
     while read -r line; do
         local basename=${line##*/}
         local clone_dir="${basename%.*}"
+        if [[ "$line" = *.vim* ]]; then
+            clone_dir="${clone_dir%.*}"
+        fi
         if [[ ! -d "$install_dir/$clone_dir" ]]; then
-            if [[ "$line" = *.vim* ]]; then
-                git clone "$line" "${clone_dir%.*}"
-            else 
-                git clone "$line" "$clone_dir"
-            fi
+            git clone "$line" "$clone_dir"
             install_count=$(( install_count+1 ))
         fi
     done < "$manifest_file"

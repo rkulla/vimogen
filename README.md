@@ -10,14 +10,17 @@ Simply create a manifest file in your home directory called .vimogen_repos
 (or let vimogen generate one for you) and put git URLs to Vim plugins in 
 it, one line at a time, like:
     
+    git://github.com/tpope/vim-sensible.git
     git://github.com/tpope/vim-surround.git
-    git://github.com/tpope/vim-rails.git
+    git://github.com/tpope/vim-repeat
     git://github.com/scrooloose/nerdtree.git
-    git://github.com/godlygeek/tabular.git
+    git://github.com/tpope/vim-git.git
+    git://github.com/tsaleh/vim-matchit.git
+    git://github.com/tomasr/molokai.git
     ...
 
 Running vimogen will give you the option to install, update, or uninstall
-the Vim plugins you use. 
+the Vim plugins you use. It evens work for color schemes.
 
 Requirements
 ============
@@ -115,6 +118,11 @@ want to install. If you don't have any new plugins you wish to install, you
 can still use vimogen to update or uninstall your existing plugins as long
 as they were installed as Pathogen bundles. Vimogen will look in your bundle
 directory and generate a $HOME/.vimogen_repos for you the first time you run it.
+
+Q: Can Vimogen install Vim color schemes, like Molokai?
+
+A: Absolutely. Anything that works with Pathogen (which is almost everything)
+will work with Vimogen.
 
 Q: What does zero-configuration mean?
 
