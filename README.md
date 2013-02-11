@@ -39,6 +39,14 @@ A: Delete it. Vimogen doesn't use zip files, it uses git repositories. All of
 the plugins from vim.org are mirrored on https://github.com/vim-scripts so
 find it on there and put the remote repository URL into ~/.pathogen_repos.
 
+Q: What is this $HOME/.vimogen_repos file about?
+
+A: It is simply a text file that consists of git URLs to the Vim plugins you
+want to install. If you don't have any new plugins you wish to install, you
+can still use vimogen to update or uninstall your existing plugins as long
+as they were installed as Pathogen bundles. Vimogen will look in your bundle
+directory and generate a $HOME/.vimogen_repos for you the first time you run it.
+
 Q: What does zero-configuration mean?
 
 A: I mean it in the sense of not having to modify your vimrc file at all in
