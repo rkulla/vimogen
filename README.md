@@ -117,7 +117,7 @@ A: Delete it. Vimogen doesn't use zip files, it uses git repositories. All of
 the plugins from vim.org are mirrored on https://github.com/vim-scripts so
 find it on there and put the remote repository URL into ~/.pathogen_repos.
 
-Q: What is this $HOME/.vimogen_repos file about?
+__Q: What is this $HOME/.vimogen_repos file about?__
 
 A: It is simply a text file that consists of git URLs to the Vim plugins you
 want to install. If you don't have any new plugins you wish to install, you
@@ -125,19 +125,19 @@ can still use vimogen to update or uninstall your existing plugins as long
 as they were installed as Pathogen bundles. Vimogen will look in your bundle
 directory and generate a $HOME/.vimogen_repos for you the first time you run it.
 
-Q: What if I use different plugins depending on what operating system I'm using
-at any given time? 
+__Q: What if I use different plugins depending on what operating system I'm using
+at any given time?__
 
 A: You can either create a different .vimogen_repos file for each machine or
 you can use the same one and just use 'if' conditions to check what platform 
 you're on in your .vimrc file. See my <a href="https://github.com/rkulla/vimrc">vimrc</a> for examples.
 
-Q: Can Vimogen install Vim color schemes, like Molokai?
+__Q: Can Vimogen install Vim color schemes, like Molokai?__
 
 A: Absolutely. Anything that works with Pathogen (which is almost everything)
 will work with Vimogen.
 
-Q: What does zero-configuration mean?
+__Q: What does zero-configuration mean?__
 
 A: I mean it in the sense of not having to modify your vimrc file at all in
 order to use Vimogen. To be fair, if you don't already have Pathogen installed
@@ -145,7 +145,7 @@ then adding a one line configuration that it requires to your vimrc is still
 necessary. Also, if ~/bin isn't in your system $PATH yet you'll need to add it
 in your bashrc, or equivalent, but that is more of an optional installation step.
 
-Q: Is Vimogen really the easiest way to manage Vim plugins?
+__Q: Is Vimogen really the easiest way to manage Vim plugins?__
 
 A: I think so. I evolved the way I was handling it into this script. Vimogen
 doesn't require adding anything to your .vimrc file or .vim directory. 
