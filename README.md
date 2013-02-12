@@ -1,6 +1,6 @@
 
 Vimogen is perhaps the easiest way to install, remove, and update Vim plugins --
-and to keep them synchronized on different machines.
+and to keep them synchronized (and up-to-date) on different machines.
 
 Requiring zero-configuration, vimogen is essentially a Pathogen bundle manager _(you
 are using <a href="https://github.com/tpope/vim-pathogen/">Pathogen</a> aren't you?)_
