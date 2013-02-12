@@ -1,5 +1,6 @@
 
-Vimogen is perhaps the easiest way to install, remove, or update Vim plugins.
+Vimogen is perhaps the easiest way to install, remove, or update Vim plugins --
+and to keep them synchronized on different machines.
 
 Requiring zero-configuration, vimogen is essentially a Pathogen bundle manager
 that manages the installing/deleting/updating of all your Vim plugins. It also
