@@ -6,8 +6,10 @@ that manages the installing/deleting/updating of all your Vim plugins. It also
 makes it easy to keep all of your Vim plugins synchronized across different
 machines.
 
-I made it because many plugins that I use, such as vim-rails and snipMate-snippets, 
-get new changes all the time and I wanted an easy way to keep my copies up-to-date.
+I created Vimogen because many plugins that I use, such as vim-rails, syntastic
+and snipMate-snippets, get new changes all of the time and I wanted an easy way
+to keep my copies up-to-date. I also wanted something easy to set up and to let
+me synchronize my plugins and color schemes across my different machines.
 
 Simply create a manifest file in your home directory called .vimogen_repos 
 (or let vimogen generate one for you) and put git URLs to Vim plugins in 
