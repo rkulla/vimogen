@@ -125,6 +125,13 @@ can still use vimogen to update or uninstall your existing plugins as long
 as they were installed as Pathogen bundles. Vimogen will look in your bundle
 directory and generate a $HOME/.vimogen_repos for you the first time you run it.
 
+Q: What if I use different plugins depending on what operating system I'm using
+at any given time? 
+
+A: You can either create a different .vimogen_repos file for each machine or
+you can use the same one and just use 'if' conditions to check what platform 
+you're on in your .vimrc file. See my <a href="https://github.com/rkulla/vimrc">vimrc</a> for examples.
+
 Q: Can Vimogen install Vim color schemes, like Molokai?
 
 A: Absolutely. Anything that works with Pathogen (which is almost everything)
