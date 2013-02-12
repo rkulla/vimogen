@@ -103,9 +103,9 @@ __Q: What is pathogen?__
 
 A: Pathogen has become the de-facto standard way of activating Vim plugins
 that were installed in modular way into their own directories, rather than
-simply unzip'ing all plugins into the same directory like old times.
-Vimogen assumes you're using Pathogen. So install Pathogen first, which is
-as easy as following the simple steps on https://github.com/tpope/vim-pathogen
+unzip'ing all plugins into the same directory. Vimogen assumes that you are 
+using Pathogen, so install Pathogen first, which is as easy as following the
+simple steps <a href="https://github.com/tpope/vim-pathogen">here</a>.
 
 __Q: Where can I find git URLs for Vim plugins?__
 
