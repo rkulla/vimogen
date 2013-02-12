@@ -14,8 +14,8 @@ synchronize all of my plugins and color schemes across my different machines.
 How Vimogen works...
 
 Simply create a manifest file in your home directory called .vimogen_repos 
-(or let vimogen generate one for you) and put git URLs to Vim plugins in 
-it, one line at a time, like:
+(or let vimogen generate one for you) and put Git URLs to Vim plugins inside
+of it -- one line at a time -- like:
     
     git://github.com/tpope/vim-sensible.git
     git://github.com/tpope/vim-surround.git
@@ -26,8 +26,11 @@ it, one line at a time, like:
     git://github.com/tomasr/molokai.git
     ...
 
-Running vimogen will give you the option to install, update, or uninstall
-the Vim plugins you use. It evens work for color schemes.
+Don't worry, finding Git URLs for all of your plugins is actually very easy 
+because vim.org mirrors them all on git hub <a href="https://github.com/vim-scripts">here</a>.
+
+Running the _vimogen_ command will give you the option to install, update, or
+uninstall of the cool Vim plugins and color schemes that you use.
 
 Requirements
 ============
