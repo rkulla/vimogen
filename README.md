@@ -9,8 +9,11 @@ machines.
 
 I created Vimogen because many plugins that I use, such as vim-rails, syntastic
 and snipMate-snippets, get new changes all of the time and I wanted an easy way
-to keep my copies up-to-date. I also wanted something easy to set up and to let
-me synchronize my plugins and color schemes across my different machines.
+to keep my copies up-to-date. I also wanted something that didn't clutter up my
+vimrc file. And I really wanted something super easy to use and to allow me
+synchronize all of my plugins and color schemes across my different machines.
+
+How Vimogen works...
 
 Simply create a manifest file in your home directory called .vimogen_repos 
 (or let vimogen generate one for you) and put git URLs to Vim plugins in 
