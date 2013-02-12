@@ -4,13 +4,12 @@ and to keep them synchronized (and up-to-date) on different machines.
 
 Requiring zero-configuration, vimogen is essentially a Pathogen bundle manager _(you
 are using <a href="https://github.com/tpope/vim-pathogen/">Pathogen</a> aren't you?)_
-that manages the installing/deleting/updating/synchronizing of all your Vim plugins. 
+that manages the installing/deleting/updating of all your Vim plugins. 
 
 I created Vimogen because many plugins that I use, such as vim-rails, syntastic
 and snipMate-snippets, get new changes all of the time and I wanted an easy way
 to keep my copies up-to-date. I also wanted something that didn't clutter up my
-vimrc file. And I really wanted something super easy to use and to allow me
-synchronize all of my plugins and color schemes across my different machines.
+vimrc file. 
 
 How Vimogen works...
 
