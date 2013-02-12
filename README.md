@@ -99,7 +99,7 @@ plugin authors create just by re-running this command often.
 
 FAQ
 ===
-Q: What is pathogen?
+__Q: What is pathogen?__
 
 A: Pathogen has become the de-facto standard way of activating Vim plugins
 that were installed in modular way into their own directories, rather than
@@ -107,11 +107,11 @@ simply unzip'ing all plugins into the same directory like old times.
 Vimogen assumes you're using Pathogen. So install Pathogen first, which is
 as easy as following the simple steps on https://github.com/tpope/vim-pathogen
 
-Q: Where can I find git URLs for Vim plugins?
+__Q: Where can I find git URLs for Vim plugins?__
 
 A: All of the plugins from vim.org are mirrored on https://github.com/vim-scripts
 
-Q: I downloaded a Vim plugin as a .zip file. What should I do?
+__Q: I downloaded a Vim plugin as a .zip file. What should I do?__
 
 A: Delete it. Vimogen doesn't use zip files, it uses git repositories. All of
 the plugins from vim.org are mirrored on https://github.com/vim-scripts so
