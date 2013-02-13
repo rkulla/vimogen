@@ -48,9 +48,9 @@ install() {
 
     while read -r line; do
         local basename=${line##*/}
-        local clone_dir="${basename%.*}"
-        if [[ "$line" = *.vim* ]]; then
-            clone_dir="${clone_dir%.*}"
+        local clone_dir="${basename%.*}" # take out the .git
+        if [[ "$clone_dir" = *.vim ]]; then
+            clone_dir="${clone_dir%.vim}"
         fi
         if [[ ! -d "$install_dir/$clone_dir" ]]; then
             git clone "$line" "$clone_dir"
@@ -77,8 +77,8 @@ uninstall() {
     while read -r line; do
         local basename=${line##*/}
         local clone_dir="${basename%.*}"
-        if [[ "$line" = *.vim* ]]; then
-            clone_dir="${clone_dir%.*}"
+        if [[ "$clone_dir" = *.vim ]]; then
+            clone_dir="${clone_dir%.vim}"
         fi
         if [[ -d "$install_dir/$clone_dir" ]]; then
             plugins+=( "$clone_dir" )
