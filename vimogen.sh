@@ -71,7 +71,6 @@ install() {
 
 uninstall() {
     pushd . > /dev/null
-    local install_count=0
     local plugins=()
 
     while read -r line; do
@@ -82,7 +81,6 @@ uninstall() {
         fi
         if [[ -d "$install_dir/$clone_dir" ]]; then
             plugins+=( "$clone_dir" )
-            install_count=$(( install_count+1 ))
         fi
     done < "$manifest_file"
 
