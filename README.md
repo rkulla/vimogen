@@ -77,7 +77,9 @@ It will give you a menu of items to choose from:
     2) Uninstall
     3) Update
     4) Exit
-    Select a menu option to perform: 1
+    Enter the number of the menu option to perform:
+
+For example, typing 1 will install all the plugins listed in .vimogen_repos.
 
 *    If you choose __Install__, then it will a _git clone_ on all the git repositories 
 that you specified in ~/.vimogen_repos into your Pathogen dir (~/.vim/bundle).
@@ -94,7 +96,7 @@ running Vimogen's install command.
          5) pydiction            12) vcscommand          19) vim-surround
          6) python-mode          13) vim-addon-mw-utils  20) ZenCoding
          7) snipmate-snippets    14) vim-jade
-         Select a plugin to completely uninstall:
+         Enter the number of the plugin you wish to uninstall:
 
     
 *    If you choose __Update__, then it will run a _git pull_ on all of your bundles. 
