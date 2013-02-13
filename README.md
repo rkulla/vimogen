@@ -4,7 +4,7 @@ and to keep them synchronized (and up-to-date) on different machines.
 
 Requiring zero-configuration, vimogen is essentially a Pathogen bundle manager _(you
 are using <a href="https://github.com/tpope/vim-pathogen/">Pathogen</a> aren't you?)_
-that manages the installing/deleting/updating of all your Vim plugins. 
+that manages the installing/deleting/updating of all your Vim add-ons. 
 
 I created Vimogen because many plugins that I use, such as vim-rails, syntastic
 and snipMate-snippets, get new changes all of the time and I wanted an easy way
@@ -14,8 +14,8 @@ vimrc file.
 How Vimogen works...
 
 Simply create a manifest file in your home directory called .vimogen_repos 
-(or let vimogen generate one for you) and put Git URLs to Vim plugins inside
-of it -- one line at a time -- like:
+(or let vimogen generate one for you) and put Git URLs to Vim plug-in repos
+inside of it -- one line at a time -- like:
     
     git://github.com/tpope/vim-sensible.git
     git://github.com/tpope/vim-surround.git
