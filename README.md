@@ -121,7 +121,9 @@ __Q: I downloaded a Vim plugin as a .zip file. What should I do?__
 
 A: Delete it. Vimogen doesn't use zip files, it uses git repositories. All of
 the plugins from vim.org are mirrored on https://github.com/vim-scripts so
-find it on there and put the remote repository URL into ~/.pathogen_repos.
+find it on there and put the remote repository URL into ~/.pathogen_repos. If
+a plugin you want is not mirrored, i's probably still somewhere on github
+or somewhere if you search for it.
 
 __Q: What is this $HOME/.vimogen_repos file about?__
 
@@ -129,7 +131,9 @@ A: It is simply a text file that consists of git URLs to the Vim plugins you
 want to install. If you don't have any new plugins you wish to install, you
 can still use vimogen to update or uninstall your existing plugins as long
 as they were installed as Pathogen bundles. Vimogen will look in your bundle
-directory and generate a $HOME/.vimogen_repos for you the first time you run it.
+directory and generate a $HOME/.vimogen_repos for you the first time you run 
+it. Note that for this to work your existing bundles must also contain git 
+repositories.
 
 __Q: What if I use different plugins depending on what operating system I'm using
 at any given time?__
@@ -142,6 +146,14 @@ __Q: Can Vimogen install Vim color schemes, like Molokai?__
 
 A: Absolutely. Anything that works with Pathogen (which is almost everything)
 will work with Vimogen.
+
+__Q: I already use Dropbox (or similar) to keep my .vim/ directory synchronized. 
+Why do I need something like Vimogen?__
+
+A: Even if you've created a symlink from ~/.vim/ to ~/Dropbox/path/to/.vim/, that
+will only help you keep your existing versions of plugins up-to-date. Vimogen will
+allow you to also automatically pull from all your plugins git repositories to keep
+them up todate in as easy as running 'vimogen' and typing 3 to run the updater.
 
 __Q: What does zero-configuration mean?__
 
