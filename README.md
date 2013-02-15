@@ -151,9 +151,9 @@ __Q: I already use Dropbox (or similar) to keep my .vim/ directory synchronized.
 Why do I need something like Vimogen?__
 
 A: Even if you've created a symlink from ~/.vim/ to ~/Dropbox/path/to/.vim/, that
-will only help you keep your existing versions of plugins up-to-date. Vimogen will
-allow you to also automatically pull from all your plugins git repositories to keep
-them up todate in as easy as running 'vimogen' and typing 3 to run the updater.
+will only help you keep your existing versions of plugins synchronized. Vimogen 
+allow you to also automatically pull from all your plugins' git repositories in
+order to keep them up-to-date by starting vimogen and typing 3 to run the updater.
 
 __Q: What does zero-configuration mean?__
 
