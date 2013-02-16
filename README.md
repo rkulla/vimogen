@@ -1,9 +1,9 @@
 
-Vimogen is perhaps the easiest way to install, remove, and update Vim plugins --
+Vimogen is a light-weight and super easy way to install, remove, and update Vim plugins --
 and to keep them synchronized (and up-to-date) on different machines.
 
-Requiring zero-configuration, vimogen is essentially a Pathogen bundle manager _(you
-are using <a href="https://github.com/tpope/vim-pathogen/">Pathogen</a> aren't you?)_
+Requiring no configuration other than a manifest file, vimogen is essentially a 
+Pathogen bundle manager _(you are using <a href="https://github.com/tpope/vim-pathogen/">Pathogen</a> aren't you?)_
 that manages the installing/deleting/updating of all your Vim add-ons. 
 
 I created Vimogen because many plugins that I use, such as vim-rails, syntastic
@@ -165,14 +165,14 @@ in your bashrc, or equivalent, but that is more of an optional installation step
 
 __Q: Is Vimogen really the easiest way to manage Vim plugins?__
 
-A: I think so. I evolved the way I was handling it into this script. Vimogen
+A: You tell me. I evolved the way I was handling it into this script. Vimogen
 doesn't require adding anything to your .vimrc file or .vim directory. 
 
 There are other ways to handle the automation of installing Vim plugins via 
 pathogen -- such as making your entire .vim directory a git repo and then
 making the plugin directories git submodules. There are also other plugin
-managers such as Vundle but they require installation and configuration. I
-find Vimogen to be the easiest method I've seen. 
+managers such as Vundle that may have more options but also require
+configuration. I find Vimogen to be the easiest method I've seen. 
 
 License
 =======
