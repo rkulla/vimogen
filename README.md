@@ -92,6 +92,7 @@ running Vimogen's install command.
         error: Must be one of nothing, matching, tracking or current.
 
      Run the following command and try again:
+
         $ git config --global push.default matching
 
 *    If you choose __Uninstall__, it will give you a list of all your plugins to choose from:
