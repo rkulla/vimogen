@@ -48,7 +48,7 @@ Installation
 Installation is optional and is as simple as installing a shell script.
 
 Create a manifest file called $HOME/.vimogen_repos that consists
-of just git repositories. I supplied a ample .vimogen_repos file
+of just git repositories. I supplied a sample .vimogen_repos file
 which contains the plugins that I like to use; make up your own, though.
 
 Note that Vimogen wil auto-enerate $HOME/.vimogen_repos if you run it
@@ -86,6 +86,13 @@ that you specified in ~/.vimogen_repos into your Pathogen dir (~/.vim/bundle).
 It will skip any directories that already exist. You can also append new plugin
 repos to the .vimogen_repos file later and install them incrementally by re-
 running Vimogen's install command.
+     If you get errors like:
+
+        error: Malformed value for push.default: simple
+        error: Must be one of nothing, matching, tracking or current.
+
+     Run the following command and try again:
+        $ git config --global push.default matching
 
 *    If you choose __Uninstall__, it will give you a list of all your plugins to choose from:
 
