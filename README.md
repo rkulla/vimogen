@@ -30,18 +30,13 @@ Don't worry, finding Git URLs for all of your plugins is actually very easy
 because vim.org mirrors them all on git hub <a href="https://github.com/vim-scripts">here</a>.
 
 Running the _vimogen_ command will give you the option to install, update, or
-uninstall of the cool Vim plugins and color schemes that you use.
+uninstall all of the Vim plugins and color schemes that you use.
 
 Requirements
 ============
-A Unix-like system (Linux, OS X, etc.) running the Bash shell.
+A Unix-like system (Linux, OS X, etc.) running the Bash shell, with git and perl installed.
 
 Vim and the [Pathogen](https://github.com/tpope/vim-pathogen/ "Pathogen") plugin.
-
-Git.
-
-So it will not work if you use Windows or Zsh, for example. Feel free to fork it
-and make it work on Windows or other shells besides bash if you want to, though!
 
 Installation
 ============
@@ -49,7 +44,7 @@ Installation is optional and is as simple as installing a shell script.
 
 Create a manifest file called $HOME/.vimogen_repos that consists
 of just git repositories. I supplied a sample .vimogen_repos file
-which contains the plugins that I like to use; make up your own, though.
+which contains the plugins that I may use. Make up your own, though.
 
 Note that Vimogen wil auto-enerate $HOME/.vimogen_repos if you run it
 without creating the file first. It will genereate it based off the
@@ -57,19 +52,23 @@ current pathogen bundles you already have, if any. This allows you to
 update or uninstall any existing plugins you have. You will only need
 to edit .vimogen_repos yourself when you want to install more plugins.
 
-Then:
+Next, run:
 
     git clone git://github.com/rkulla/vimogen.git
     chmod u+x vimogen.sh
     cp vimogen.sh ~/bin/vimogen 
     
-or put it somewhere else in your $PATH if you don't like ~/bin.
+or put it somewhere else in your $PATH if you don't use ~/bin.
 
 Usage
 =====
 Run vimogen without arguments:
 
     $ vimogen
+
+or, if you didn't install vimogen using the directions in this README:
+
+    $ ./vimogen.sh
 
 It will give you a menu of items to choose from:
 
@@ -79,7 +78,7 @@ It will give you a menu of items to choose from:
     4) Exit
     Enter the number of the menu option to perform:
 
-For example, typing 1 will install all the plugins listed in .vimogen_repos.
+For example, typing '1' will install all the plugins listed in .vimogen_repos.
 
 *    If you choose __Install__, then it will a _git clone_ on all the git repositories 
 that you specified in ~/.vimogen_repos into your Pathogen dir (~/.vim/bundle).
