@@ -45,7 +45,7 @@ validate_environment() {
 }
 
 install() {
-    printf "Installing Vim plugins into $install_dir...\n"
+    printf "Installing Vim plugins into $install_dir/...\n"
     pushd . > /dev/null
     local install_count=0
 
@@ -58,7 +58,7 @@ install() {
             clone_dir="${clone_dir%.vim}"
         fi
         if [[ ! -d "$install_dir/$clone_dir" ]]; then
-            git clone "$line" "$clone_dir"
+            git clone -q "$line" "$clone_dir"
             install_count=$(( install_count+1 ))
         fi
     done < "$manifest_file"

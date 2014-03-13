@@ -4,3 +4,4 @@ git://github.com/tpope/vim-repeat
 git://github.com/tpope/vim-git.git
 git://github.com/kien/ctrlp.vim.git
 git://github.com/tomasr/molokai.git
+git://github.com/rkulla/vimogen.git
