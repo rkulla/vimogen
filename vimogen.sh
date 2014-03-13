@@ -36,7 +36,7 @@ validate_environment() {
     fi
 
     if [[ ! -f "$manifest_file" ]]; then
-        printf "$manifest_file doesn't exist. Trying to generate from any existing bundles...\n"
+        printf "$manifest_file doesn't exist. Trying to generate from any existing plugins\n"
         generate_manifest
     fi
     
