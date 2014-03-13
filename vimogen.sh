@@ -1,6 +1,6 @@
 #!/bin/bash
 # vimogen.sh by Ryan Kulla <rkulla@gmail.com>
-# version 1.3
+# version 1.4
 # License: Vim License. See :help license
 
 install_dir="$HOME/.vim/bundle"
