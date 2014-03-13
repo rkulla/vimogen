@@ -5,6 +5,8 @@
 
 install_dir="$HOME/.vim/bundle"
 manifest_file="$HOME/.vimogen_repos"
+bold=$(tput bold)
+normal=$(tput sgr0)
 
 usage() {
     printf "Usage:\n"
@@ -45,7 +47,7 @@ validate_environment() {
 }
 
 install() {
-    printf "Installing Vim plugins into $install_dir/...\n"
+    printf "${bold}Installing plugins into $install_dir/...${normal}\n"
     pushd . > /dev/null
     local install_count=0
 
@@ -122,14 +124,15 @@ uninstall() {
 }
 
 update() {
-    printf "Updating...\n"
+    printf "${bold}Updating...${normal}\n"
     pushd . > /dev/null
 
     cd "$install_dir"
     for i in $(ls); do 
         pushd . > /dev/null
         cd "$i" 
-        git pull --verbose
+        git pull --verbose 2>&1 | awk 'NR==1;END{print}'
+        echo -e
         popd > /dev/null
     done
 
