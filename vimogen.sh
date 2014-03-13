@@ -36,7 +36,7 @@ validate_environment() {
     fi
 
     if [[ ! -f "$manifest_file" ]]; then
-        printf "$manifest_file doesn't exist. Trying to generate from any existing plugins\n"
+        printf "$manifest_file doesn't exist. Trying to generate from any existing bundles...\n"
         generate_manifest
     fi
     
@@ -131,7 +131,13 @@ update() {
     for i in $(ls); do 
         pushd . > /dev/null
         cd "$i" 
-        git pull --verbose 2>&1 | awk 'NR==1;END{print}'
+        local pull=$(git pull --verbose 2>&1 | awk 'NR==1;END{print}')
+        printf "$pull\n"
+
+        if [[ $pull = *vimogen* ]]; then
+            printf "${bold}Vimogen was updated! You should cp the updated script to your PATH${normal}\n"
+        fi
+
         echo -e
         popd > /dev/null
     done
