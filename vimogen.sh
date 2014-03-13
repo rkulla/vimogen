@@ -34,13 +34,18 @@ validate_environment() {
     fi
 
     if [[ ! -f "$manifest_file" ]]; then
-        printf "$manifest_file doesn't exist. Generating...\n"
+        printf "$manifest_file doesn't exist. Trying to generate from any existing bundles...\n"
         generate_manifest
+    fi
+    
+    if [[ ! -f "$manifest_file" ]]; then
+        printf "[failed].\nPlease create $manifest_file.\n"
+        exit 0
     fi
 }
 
 install() {
-    printf "Installing...\n"
+    printf "Installing Vim plugins into $install_dir...\n"
     pushd . > /dev/null
     local install_count=0
 
