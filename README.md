@@ -116,7 +116,9 @@ running Vimogen's install command.
     
 *    If you choose __Update__, then it will run a _git pull_ on all of your bundles. 
 This is great because you can stay up-to-date with all the new features the 
-plugin authors create just by re-running this command often.
+plugin authors create just by re-running this command often. Vimogen is also a little self-aware --
+as long as you keep a reference to the vimogen repository in .vimogen_repos, it will show you
+if a new version was updated whenever you run the update command.
 
 FAQ
 ===
