@@ -57,7 +57,7 @@ install() {
         local basename=${line##*/}
         local clone_dir="${basename%.*}" # take out the .git
         if [[ "$clone_dir" = *.vim ]]; then
-            clone_dir="${clone_dir%.vim}"
+            clone_dir="${clone_dir%.vim}" # take out the .vim
         fi
         if [[ ! -d "$install_dir/$clone_dir" ]]; then
             git clone -q "$line" "$clone_dir"
@@ -79,17 +79,13 @@ install() {
 uninstall() {
     pushd . > /dev/null
     local plugins=()
+    cd "$install_dir"
 
-    while read -r line; do
-        local basename=${line##*/}
-        local clone_dir="${basename%.*}"
-        if [[ "$clone_dir" = *.vim ]]; then
-            clone_dir="${clone_dir%.vim}"
-        fi
+    for clone_dir in $(ls); do 
         if [[ -d "$install_dir/$clone_dir" ]]; then
             plugins+=( "$clone_dir" )
         fi
-    done < "$manifest_file"
+    done
 
     local sorted_plugins=($(printf '%s\n' "${plugins[@]}"|sort -f))
 
@@ -119,6 +115,8 @@ uninstall() {
                 ;;
         esac
     done
+
+    popd > /dev/null
 
     exit 0
 }
