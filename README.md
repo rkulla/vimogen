@@ -8,7 +8,7 @@ that manages the installing/deleting/updating of all your Vim add-ons.
 
 I created Vimogen because many plugins that I use (vim-rails, syntastic, etc), get new
 changes all of the time and I wanted an easy way to keep my copies up-to-date. And I
-wanted a super simple way to install all my favorite plugins whenever I installed a new 
+wanted a super simple way to install all my favorite plugins whenever I install a new 
 operating system and need to get vim the way I like it quickly. I also wanted something
 that didn't clutter up my vimrc file. 
 
