@@ -1,33 +1,32 @@
 
-Vimogen is a light-weight and super easy way to install, remove, and update Vim plugins --
-and to keep them synchronized (and up-to-date) on different machines.
+Vimogen is a very easy way to install, update, or remove Vim plugins --
+and optionally keep them synchronized across multiple vim installations.
 
 Requiring no configuration other than a manifest file, vimogen is essentially a 
 Pathogen bundle manager _(you are using <a href="https://github.com/tpope/vim-pathogen/">Pathogen</a> aren't you?)_
 that manages the installing/deleting/updating of all your Vim add-ons. 
 
-I created Vimogen because many plugins that I use, such as vim-rails, syntastic
-and snipMate-snippets, get new changes all of the time and I wanted an easy way
-to keep my copies up-to-date. I also wanted something that didn't clutter up my
-vimrc file. 
+I created Vimogen because many plugins that I use (vim-rails, syntastic, etc), get new
+changes all of the time and I wanted an easy way to keep my copies up-to-date. And I
+wanted a super simple way to install all my favorite plugins whenever I installed a new 
+operating system and need to get vim the way I like it quickly. I also wanted something
+that didn't clutter up my vimrc file. 
 
 How Vimogen works...
 
 Simply create a manifest file in your home directory called .vimogen_repos 
-(or let vimogen generate one for you) and put Git URLs to Vim plug-in repos
-inside of it -- one line at a time -- like:
+(or let vimogen generate one for you) and put Git clone URLs to Vim plug-in
+repositories inside of it -- one line at a time -- like:
     
     git://github.com/tpope/vim-sensible.git
     git://github.com/tpope/vim-surround.git
-    git://github.com/tpope/vim-repeat
     git://github.com/scrooloose/nerdtree.git
-    git://github.com/tpope/vim-git.git
-    git://github.com/tsaleh/vim-matchit.git
     git://github.com/tomasr/molokai.git
     ...
 
 Don't worry, finding Git URLs for all of your plugins is actually very easy 
 because vim.org mirrors them all on github <a href="https://github.com/vim-scripts">here</a>.
+You can also use bitbucket or any other git repository location if you need to.
 
 Running the _vimogen_ command will give you the option to install, update, or
 uninstall all of the Vim plugins and color schemes that you use.
@@ -128,7 +127,7 @@ __Q: I downloaded a Vim plugin as a .zip file. What should I do?__
 
 A: Delete it. Vimogen doesn't use zip files, it uses git repositories. All of
 the plugins from vim.org are mirrored on https://github.com/vim-scripts so
-find it on there and put the remote repository URL into ~/.pathogen_repos. If
+find it on there and put its github clone URL into ~/.vimogen_repos. If
 a plugin you want is not mirrored, i's probably still somewhere on github
 or somewhere if you search for it.
 
@@ -142,13 +141,6 @@ directory and generate a $HOME/.vimogen_repos for you the first time you run
 it. Note that for this to work your existing bundles must also contain git 
 repositories.
 
-__Q: What if I use different plugins depending on what operating system I'm using
-at any given time?__
-
-A: You can either create a different .vimogen_repos file for each machine or
-you can use the same one and just use 'if' conditions to check what platform 
-you're on in your .vimrc file. See my <a href="https://github.com/rkulla/vimrc">vimrc</a> for examples.
-
 __Q: Can Vimogen install Vim color schemes, like Molokai?__
 
 A: Absolutely. Anything that works with Pathogen (which is almost everything)
@@ -160,15 +152,7 @@ Why do I need something like Vimogen?__
 A: Even if you've created a symlink from ~/.vim/ to ~/Dropbox/path/to/.vim/, that
 will only help you keep your existing versions of plugins synchronized. Vimogen 
 allows you to also automatically pull from all your plugins' git repositories in
-order to keep them up-to-date by starting vimogen and typing 3 to run the updater.
-
-__Q: What does zero-configuration mean?__
-
-A: I mean it in the sense of not having to modify your vimrc file at all in
-order to use Vimogen. To be fair, if you don't already have Pathogen installed
-then adding a one line configuration that it requires to your vimrc is still
-necessary. Also, if ~/bin isn't in your system $PATH yet you'll need to add it
-in your bashrc, or equivalent, but that is more of an optional installation step.
+order to keep them up-to-date.
 
 __Q: Is Vimogen really the easiest way to manage Vim plugins?__
 
@@ -179,7 +163,7 @@ There are other ways to handle the automation of installing Vim plugins via
 pathogen -- such as making your entire .vim directory a git repo and then
 making the plugin directories git submodules. There are also other plugin
 managers such as Vundle that may have more options but also require
-configuration. I find Vimogen to be the easiest method I've seen. 
+configuration. Vimogen is the easiest method I've seen.
 
 License
 =======
