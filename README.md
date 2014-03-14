@@ -166,13 +166,14 @@ order to keep them up-to-date.
 __Q: Is Vimogen really the easiest way to manage Vim plugins?__
 
 A: You tell me. I evolved the way I was handling it into this script. Vimogen
-doesn't require adding anything to your .vimrc file or .vim directory. 
+doesn't require adding anything to your .vimrc file or remember any new vim commands. 
 
 There are other ways to handle the automation of installing Vim plugins via 
 pathogen -- such as making your entire .vim directory a git repo and then
-making the plugin directories git submodules. There are also other plugin
-managers such as Vundle that may have more options but also require
-configuration. Vimogen is the easiest method I've seen.
+making the plugin directories git submodules, but to me submodules are overkill and besides
+I like to keep my .vim/ chmod 600 and store my .swp files there, and without having to manage
+it as a git repo. There are also other plugin managers such as Vundle that require configuration.
+Vimogen is just the easiest method I've seen.
 
 License
 =======
