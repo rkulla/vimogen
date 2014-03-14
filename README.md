@@ -6,17 +6,20 @@ Requiring no configuration other than a manifest file, vimogen is essentially a
 <a href="https://github.com/tpope/vim-pathogen/">Pathogen</a> bundle manager 
 that manages the installing/deleting/updating of all your Vim add-ons. If you don't know what Pathogen is, it's
 basically lets you store all of your plugins in one directory, using git checkouts, so you don't have to deal
-with unzipping .zip files and stuff into misc. directories to get plugins to work. There are alternatives to
-Pathogen+Vimogen but they either don't use git or require configuration or other things that I didn't like. For
-example, with vimogen, you can just use your same .vimrc across multiple machines, but have separate .vimogen_repo
-manifest files for each one and it just works. This is useful if you don't want to use development plugins on a
-production machine, and so on.
+with unzipping .zip files and stuff into misc. directories to get plugins to work.
 
 I created Vimogen because many plugins that I use (vim-rails, syntastic, etc), get new
 changes all of the time and I wanted an easy way to keep my copies up-to-date. And I
 wanted a super simple way to install all my favorite plugins whenever I install a new 
 operating system and need to get vim the way I like it quickly. I also wanted something
 that didn't clutter up my vimrc file. 
+
+There are alternatives to Pathogen+Vimogen but they either don't use git or require configuration or other things
+that I didn't like. For example, with Vimogen you can use your same .vimrc across multiple machines, but have
+separate .vimogen_repo manifest files for each one and it just works. This is useful if you don't want to use
+development plugins on a production machine, and so on. I tend to keep .vimogen_repos.dev and .vimogen_repos.prod
+and upload the corresponding files to the appropriate machines, and rename them to .vimogen_repos once uploaded.
+
 
 How Vimogen works...
 
