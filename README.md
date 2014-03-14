@@ -27,16 +27,16 @@ inside of it -- one line at a time -- like:
     ...
 
 Don't worry, finding Git URLs for all of your plugins is actually very easy 
-because vim.org mirrors them all on git hub <a href="https://github.com/vim-scripts">here</a>.
+because vim.org mirrors them all on github <a href="https://github.com/vim-scripts">here</a>.
 
 Running the _vimogen_ command will give you the option to install, update, or
 uninstall all of the Vim plugins and color schemes that you use.
 
 Requirements
 ============
-A Unix-like system (Linux, OS X, etc.) running the Bash shell, with git and perl installed.
+* A Unix-like system (Linux, OS X, etc.) running the Bash shell and Git.
 
-Vim and the [Pathogen](https://github.com/tpope/vim-pathogen/ "Pathogen") plugin.
+* The [Pathogen](https://github.com/tpope/vim-pathogen/ "Pathogen") plugin for Vim.
 
 Installation
 ============
