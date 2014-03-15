@@ -136,6 +136,10 @@ update() {
             printf "${bold}Vimogen was updated! You should cp the updated script to your PATH${normal}\n"
         fi
 
+        if [[ $pull = *pathogen* ]]; then
+            printf "${bold}Pathogen was updated! You should cp $/.vim/bundle/vim-pathogen/bundle/pathogen.vim to ~/.vim/autoload/${normal}\n"
+        fi
+
         echo -e
         popd > /dev/null
     done
