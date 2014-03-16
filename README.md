@@ -4,9 +4,8 @@ and optionally keep them synchronized across multiple vim installations.
 
 Requiring no configuration other than a manifest file, vimogen is essentially a 
 <a href="https://github.com/tpope/vim-pathogen/">Pathogen</a> bundle manager 
-that manages the installing/deleting/updating of all your Vim add-ons. If you don't know what Pathogen is, it's
-basically lets you store all of your plugins in one directory, using git checkouts, so you don't have to deal
-with unzipping .zip files and stuff into misc. directories to get plugins to work.
+that manages the installing/deleting/updating of all your Vim add-ons. If you don't know what Pathogen is, it
+lets you store all of your plugins in one directory, as git checkouts.
 
 I created Vimogen because many plugins that I use (vim-rails, syntastic, etc), get new
 changes all of the time and I wanted an easy way to keep my copies up-to-date. And I
