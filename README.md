@@ -85,21 +85,13 @@ It will give you a menu of items to choose from:
     4) Exit
     Enter the number of the menu option to perform:
 
-For example, typing '1' will install all the plugins listed in .vimogen_repos.
+For example, typing __1__ will install all the plugins listed in .vimogen_repos.
 
 *    If you choose __Install__, then it will a _git clone_ on all the git repositories 
 that you specified in ~/.vimogen_repos into your Pathogen dir (~/.vim/bundle).
 It will skip any directories that already exist. You can also append new plugin
 repos to the .vimogen_repos file later and install them incrementally by re-
 running Vimogen's install command.
-     If you get errors like:
-
-        error: Malformed value for push.default: simple
-        error: Must be one of nothing, matching, tracking or current.
-
-     Run the following command and try again:
-
-        $ git config --global push.default matching
 
 *    If you choose __Uninstall__, it will give you a list of all your plugins to choose from:
 
@@ -115,9 +107,11 @@ running Vimogen's install command.
     
 *    If you choose __Update__, then it will run a _git pull_ on all of your bundles. 
 This is great because you can stay up-to-date with all the new features the 
-plugin authors create just by re-running this command often. Vimogen is also a little self-aware --
-as long as you keep a reference to the vimogen repository in .vimogen_repos, it will show you
-if a new version was updated whenever you run the update command.
+plugin authors create just by re-running this command often.
+
+Tip: Keep a reference to the vimogen repository in .vimogen_repos because it will show you
+if a new version was updated whenever you run the update command. Then all you have to do is
+copy the updated vimogen.sh file to your PATH to have the latest version.
 
 FAQ
 ===
