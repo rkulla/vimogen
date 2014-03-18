@@ -31,12 +31,12 @@ generate_manifest() {
 
 validate_environment() {
     if [[ ! -d "$install_dir" ]]; then
-        printf "$install_dir doesn't exist. Please create it first.\n"
+        printf "%s doesn't exist. Please create it first.\n" "$install_dir"
         exit 0
     fi
 
     if [[ ! -f "$manifest_file" ]]; then
-        printf "$manifest_file doesn't exist. Trying to generate from any existing bundles...\n"
+        printf "%s doesn't exist. Trying to generate from any existing bundles...\n" "$manifest_file"
         generate_manifest
     fi
     
@@ -130,14 +130,14 @@ update() {
         pushd . > /dev/null
         cd "$i" 
         local pull=$(git pull --verbose 2>&1 | awk 'NR==1;END{print}')
-        printf "$pull\n"
+        printf "%s\n" "$pull"
 
         if [[ $pull = *vimogen* ]]; then
             printf "${bold}Vimogen was updated! You should cp the updated script to your PATH${normal}\n"
         fi
 
         if [[ $pull = *pathogen* ]]; then
-            printf "${bold}Pathogen was updated! You should cp $/.vim/bundle/vim-pathogen/bundle/pathogen.vim to ~/.vim/autoload/${normal}\n"
+            printf "${bold}Pathogen was updated! You should cp ~/.vim/bundle/vim-pathogen/bundle/pathogen.vim to ~/.vim/autoload/${normal}\n"
         fi
 
         echo -e
