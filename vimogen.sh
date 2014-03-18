@@ -132,11 +132,11 @@ update() {
         local pull=$(git pull --verbose 2>&1 | awk 'NR==1;END{print}')
         printf "%s\n" "$pull"
 
-        if [[ $pull = *vimogen* ]]; then
+        if [[ $pull = *vimogen* && $pull != *"Already up-to-date"* ]]; then
             printf "${bold}Vimogen was updated! You should cp the updated script to your PATH${normal}\n"
         fi
 
-        if [[ $pull = *pathogen* ]]; then
+        if [[ $pull = *pathogen* && $pull != *"Already up-to-date"* ]]; then
             printf "${bold}Pathogen was updated! You should cp ~/.vim/bundle/vim-pathogen/bundle/pathogen.vim to ~/.vim/autoload/${normal}\n"
         fi
 
