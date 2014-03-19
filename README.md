@@ -79,33 +79,33 @@ or, for more verbose output:
 
 It will give you a menu of items to choose from:
 
-    1) Install
-    2) Uninstall
-    3) Update
-    4) Exit
+    1) INSTALL
+    2) UNINSTALL
+    3) UPDATE
+    4) EXIT
     Enter the number of the menu option to perform:
 
 For example, typing __1__ will install all the plugins listed in .vimogen_repos.
 
-*    If you choose __Install__, then it will a _git clone_ on all the git repositories 
+*    If you choose INSTALL, then it will a _git clone_ on all the git repositories 
 that you specified in ~/.vimogen_repos into your Pathogen dir (~/.vim/bundle).
 It will skip any directories that already exist. You can also append new plugin
 repos to the .vimogen_repos file later and install them incrementally by re-
 running Vimogen's install command.
 
-*    If you choose __Uninstall__, it will give you a list of all your plugins to choose from:
+*    If you choose UNINSTALL, it will give you a list of all your plugins to choose from:
 
-         1) EXIT                  8) tabular             15) vim-matchit
-         2) ctrlp                 9) taglist             16) vim-rails
-         3) dbext                10) tComment            17) vim-repeat
-         4) nerdtree             11) tlib_vim            18) vim-snipmate
-         5) pydiction            12) vcscommand          19) vim-surround
-         6) python-mode          13) vim-addon-mw-utils  20) ZenCoding
-         7) snipmate-snippets    14) vim-jade
-         Enter the number of the plugin you wish to uninstall:
+         1) EXIT                  8) tabular             15) vimogen
+         2) ctrlp                 9) taglist             16) vim-pathogen
+         3) molokai              10) tComment            17) vim-rails
+         4) nerdtree             11) tlib_vim            18) vim-repeat
+         5) pydiction            12) vcscommand          19) vim-snipmate
+         6) python-mode          13) vim-addon-mw-utils  20) vim-surround
+         7) snipmate-snippets    14) vim-jade            21) ZenCoding
+         __Enter the number of the plugin you wish to uninstall:__
 
     
-*    If you choose __Update__, then it will run a _git pull_ on all of your bundles. 
+*    If you choose UPDATE, then it will run a _git pull_ on all of your bundles. 
 This is great because you can stay up-to-date with all the new features the 
 plugin authors create just by re-running this command often.
 

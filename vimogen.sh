@@ -156,19 +156,19 @@ update() {
 
 get_menu_opt() {
     PS3="${bold}Enter the number of the menu option to perform:${normal} "
-    select option in Install Uninstall Update Exit
+    select option in INSTALL UNINSTALL UPDATE EXIT
     do
         case "$option" in
-            Install) 
+            INSTALL) 
                 install
                 ;;
-            Uninstall) 
+            UNINSTALL) 
                 uninstall
                 ;;
-            Update) 
+            UPDATE) 
                 update
                 ;;
-            Exit) 
+            EXIT) 
                 exit 0
                 ;;
             *) 
