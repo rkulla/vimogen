@@ -102,16 +102,17 @@ running Vimogen's install command.
          5) pydiction            12) vcscommand          19) vim-snipmate
          6) python-mode          13) vim-addon-mw-utils  20) vim-surround
          7) snipmate-snippets    14) vim-jade            21) ZenCoding
-         __Enter the number of the plugin you wish to uninstall:__
+         Enter the number of the plugin you wish to uninstall:
 
     
 *    If you choose UPDATE, then it will run a _git pull_ on all of your bundles. 
 This is great because you can stay up-to-date with all the new features the 
 plugin authors create just by re-running this command often.
 
-Tip: Keep a reference to the vimogen repository in .vimogen_repos because it will show you
+Tip: Keep a reference to the vimogen repository in .vimogen_repos and it will show you
 if a new version was updated whenever you run the update command. Then all you have to do is
-copy the updated vimogen.sh file to your PATH to have the latest version.
+copy the updated vimogen.sh file to your PATH to have the latest version. Do the same for
+vim-pathogen's repo.
 
 FAQ
 ===
