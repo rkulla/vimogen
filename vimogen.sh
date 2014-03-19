@@ -7,10 +7,11 @@ install_dir="$HOME/.vim/bundle"
 manifest_file="$HOME/.vimogen_repos"
 bold=$(tput bold)
 normal=$(tput sgr0)
+arg1="$1"
 
 usage() {
     printf "Usage:\n"
-    printf "vimogen\n\n" 
+    printf "vimogen [-v]\n\n" 
     exit
 }
 
@@ -124,12 +125,16 @@ uninstall() {
 update() {
     printf "${bold}Updating...${normal}\n"
     pushd . > /dev/null
-
     cd "$install_dir"
+
     for i in $(ls); do 
         pushd . > /dev/null
         cd "$i" 
-        local pull=$(git pull --verbose 2>&1 | awk 'NR==1;END{print}')
+        if [[ $arg1 = "-v" ]]; then
+            local pull=$(git pull --verbose)
+        else
+            local pull=$(git pull --verbose 2>&1 | awk 'NR==1;END{print}')
+        fi
         printf "%s\n" "$pull"
 
         if [[ $pull = *vimogen* && $pull != *"Already up-to-date"* ]]; then
@@ -173,7 +178,7 @@ get_menu_opt() {
     done
 }
 
-if (( $# > 0 )); then
+if (( $# > 1 )); then
     usage
 else
     validate_environment

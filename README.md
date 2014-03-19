@@ -73,9 +73,9 @@ Run vimogen without arguments:
 
     $ vimogen
 
-or, if you didn't install vimogen using the directions in this README:
+or, for more verbose output:
 
-    $ ./vimogen.sh
+    $ vimogen -v
 
 It will give you a menu of items to choose from:
 
