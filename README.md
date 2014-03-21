@@ -109,7 +109,11 @@ running Vimogen's install command.
 This is great because you can stay up-to-date with all the new features the 
 plugin authors create just by re-running this command often.
 
-Tip: Keep a reference to the vimogen repository in .vimogen_repos and it will show you
+TIP: If you ever want to temporarily disable a plugin, just use vimogen to UNINSTALL it, 
+then whenever you want it back just run vimogen's INSTALL command, which will restore it
+as long as you don't delete it from .vimogen_repos.
+
+TIP: Keep a reference to the vimogen repository in .vimogen_repos and it will show you
 if a new version was updated whenever you run the update command. Then all you have to do is
 copy the updated vimogen.sh file to your PATH to have the latest version. Do the same for
 vim-pathogen's repo.
