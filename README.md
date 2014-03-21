@@ -95,7 +95,7 @@ running Vimogen's install command.
 
 *    If you choose UNINSTALL, it will give you a list of all your plugins to choose from:
 
-         1) EXIT                  8) tabular             15) vimogen
+         1) CANCEL                8) tabular             15) vimogen
          2) ctrlp                 9) taglist             16) vim-pathogen
          3) molokai              10) tComment            17) vim-rails
          4) nerdtree             11) tlib_vim            18) vim-repeat
@@ -104,6 +104,7 @@ running Vimogen's install command.
          7) snipmate-snippets    14) vim-jade            21) ZenCoding
          Enter the number of the plugin you wish to uninstall:
 
+Press 1 to cancel.
     
 *    If you choose UPDATE, then it will run a _git pull_ on all of your bundles. 
 This is great because you can stay up-to-date with all the new features the 

@@ -73,8 +73,6 @@ install() {
     else
         printf "Installed $install_count plugins\n"
     fi
-    
-    exit 0
 }
 
 uninstall() {
@@ -91,13 +89,13 @@ uninstall() {
     local sorted_plugins=($(printf '%s\n' "${plugins[@]}"|sort -f))
 
     PS3="${bold}Enter the number of the plugin you wish to uninstall:${normal} "
-    select option in "EXIT" "${sorted_plugins[@]}"
+    select option in "CANCEL" "${sorted_plugins[@]}"
     do
         case "$option" in
-            EXIT) 
-                if [[ "$option" -eq "EXIT" ]]; then
-                    printf "exiting\n"
-                    exit 0
+            CANCEL) 
+                if [[ "$option" -eq "CANCEL" ]]; then
+                    printf "cancelling\n"
+                    return 0
                 fi
                 ;;
             *)
@@ -110,6 +108,7 @@ uninstall() {
                     fi
                     echo
                     uninstall
+                    break
                 else
                     printf "Invalid selection\n"
                 fi
@@ -118,8 +117,6 @@ uninstall() {
     done
 
     popd > /dev/null
-
-    exit 0
 }
 
 update() {
@@ -150,12 +147,12 @@ update() {
     done
 
     popd > /dev/null
-
-    exit 0
 }
 
 get_menu_opt() {
+    clear
     PS3="${bold}Enter the number of the menu option to perform:${normal} "
+
     select option in INSTALL UNINSTALL UPDATE EXIT
     do
         case "$option" in
@@ -164,6 +161,7 @@ get_menu_opt() {
                 ;;
             UNINSTALL) 
                 uninstall
+                PS3="${bold}Enter the number of the menu option to perform:${normal} "
                 ;;
             UPDATE) 
                 update
@@ -172,6 +170,7 @@ get_menu_opt() {
                 exit 0
                 ;;
             *) 
+                PS3="${bold}Enter the number of the menu option to perform:${normal} "
                 echo  "Invalid selection"
                 ;;
         esac
