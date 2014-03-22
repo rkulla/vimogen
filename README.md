@@ -104,7 +104,7 @@ running Vimogen's install command.
          7) snipmate-snippets    14) vim-jade            21) ZenCoding
          Enter the number of the plugin you wish to uninstall:
 
-Press 1 to cancel.
+Press 1 to cancel. 2 to remove all your plugins at once.
     
 *    If you choose UPDATE, then it will run a _git pull_ on all of your bundles. 
 This is great because you can stay up-to-date with all the new features the 

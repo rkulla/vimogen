@@ -89,7 +89,7 @@ uninstall() {
     local sorted_plugins=($(printf '%s\n' "${plugins[@]}"|sort -f))
 
     PS3="${bold}Enter the number of the plugin you wish to uninstall:${normal} "
-    select option in "CANCEL" "${sorted_plugins[@]}"
+    select option in "CANCEL" "ALL" "${sorted_plugins[@]}"
     do
         case "$option" in
             CANCEL) 
@@ -97,6 +97,16 @@ uninstall() {
                     printf "cancelling\n"
                     return 0
                 fi
+                ;;
+            ALL)
+                read -n 1 -p "${bold}Delete all files from $install_dir/*: y/n?${normal} " prompt_rm
+                if [[ "$prompt_rm" = 'y' ]]; then
+                    printf "\nUninstalling all plugins...\n"
+                    rm -rf "$install_dir/"*
+                    printf "Done\n"
+                fi
+                echo
+                return 0
                 ;;
             *)
                 if [[ ! -z "$option" ]]; then
