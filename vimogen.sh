@@ -61,8 +61,9 @@ install() {
             clone_dir="${clone_dir%.vim}" # take out the .vim
         fi
         if [[ ! -d "$install_dir/$clone_dir" ]]; then
-            git clone -q "$line" "$clone_dir"
+            local gitclone=$(git clone "$line" "$clone_dir" 2>&1 | awk 'NR==2;END{print}')
             install_count=$(( install_count+1 ))
+            printf "%s\n" "$gitclone"
         fi
     done < "$manifest_file"
 
