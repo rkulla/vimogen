@@ -112,11 +112,8 @@ uninstall() {
             *)
                 if [[ ! -z "$option" ]]; then
                     local path_to_rm="$install_dir/$option"
-                    read -n 1 -p "rm $path_to_rm: y/n? " prompt_rm
-                    if [[ "$prompt_rm" = 'y' ]]; then
-                        printf "\nUninstalling [$option]\n"
-                        rm -rf "$path_to_rm"
-                    fi
+                    printf "\nUninstalling [$option]\n"
+                    rm -rf "$path_to_rm"
                     echo
                     uninstall
                     break
