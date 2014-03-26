@@ -1,6 +1,6 @@
 #!/bin/bash
 # vimogen.sh by Ryan Kulla <rkulla@gmail.com>
-# version 1.4
+# version 1.4.1
 # License: Vim License. See :help license
 
 install_dir="$HOME/.vim/bundle"
@@ -78,50 +78,51 @@ install() {
 
 uninstall() {
     pushd . > /dev/null
-    local plugins=()
     cd "$install_dir"
 
-    for clone_dir in $(ls); do 
-        if [[ -d "$install_dir/$clone_dir" ]]; then
-            plugins+=( "$clone_dir" )
-        fi
-    done
-
-    local sorted_plugins=($(printf '%s\n' "${plugins[@]}"|sort -f))
-
     PS3="${bold}Enter the number of the plugin you wish to uninstall:${normal} "
-    select option in "CANCEL" "ALL" "${sorted_plugins[@]}"
+    while :
     do
-        case "$option" in
-            CANCEL) 
-                if [[ "$option" -eq "CANCEL" ]]; then
-                    printf "cancelling\n"
-                    return 0
-                fi
-                ;;
-            ALL)
-                read -n 1 -p "${bold}Delete all files from $install_dir/*: y/n?${normal} " prompt_rm
-                if [[ "$prompt_rm" = 'y' ]]; then
-                    printf "\nUninstalling all plugins...\n"
-                    rm -rf "$install_dir/"*
-                    printf "Done\n"
-                fi
-                echo
-                return 0
-                ;;
-            *)
-                if [[ ! -z "$option" ]]; then
-                    local path_to_rm="$install_dir/$option"
-                    printf "\nUninstalling [$option]\n"
-                    rm -rf "$path_to_rm"
-                    echo
-                    uninstall
+        local plugins=()
+        for clone_dir in $(ls); do 
+            if [[ -d "$install_dir/$clone_dir" ]]; then
+                plugins+=( "$clone_dir" )
+            fi
+        done
+        local sorted_plugins=($(printf '%s\n' "${plugins[@]}"|sort -f))
+        printf '\n%s\n' "------------------------------------------------------------------"
+        select option in "CANCEL" "ALL" "${sorted_plugins[@]}"
+        do
+            case "$option" in
+                CANCEL) 
+                    if [[ "$option" -eq "CANCEL" ]]; then
+                        return 0
+                    fi
                     break
-                else
-                    printf "Invalid selection\n"
-                fi
-                ;;
-        esac
+                    ;;
+                ALL)
+                    read -n 1 -p "${bold}Delete all files from $install_dir/*: y/n?${normal} " prompt_rm
+                    if [[ "$prompt_rm" = 'y' ]]; then
+                        printf "\nUninstalling all plugins...\n"
+                        rm -rf "$install_dir/"*
+                        printf "Done\n"
+                    fi
+                    echo
+                    break
+                    ;;
+                *)
+                    if [[ ! -z "$option" ]]; then
+                        local path_to_rm="$install_dir/$option"
+                        printf "Uninstalling $option"
+                        rm -rf "$path_to_rm"
+                        echo
+                    else
+                        printf "Invalid selection\n"
+                    fi
+                    break
+                    ;;
+            esac
+        done
     done
 
     popd > /dev/null
@@ -158,30 +159,38 @@ update() {
 }
 
 get_menu_opt() {
-    clear
     PS3="${bold}Enter the number of the menu option to perform:${normal} "
 
-    select option in INSTALL UNINSTALL UPDATE EXIT
+    while :
+    printf '\n%s\n' "------------------------------------------------------------------"
     do
-        case "$option" in
-            INSTALL) 
-                install
-                ;;
-            UNINSTALL) 
-                uninstall
-                PS3="${bold}Enter the number of the menu option to perform:${normal} "
-                ;;
-            UPDATE) 
-                update
-                ;;
-            EXIT) 
-                exit 0
-                ;;
-            *) 
-                PS3="${bold}Enter the number of the menu option to perform:${normal} "
-                echo  "Invalid selection"
-                ;;
-        esac
+        select option in INSTALL UNINSTALL UPDATE EXIT
+        do
+            case "$option" in
+                INSTALL) 
+                    install
+                    break
+                    ;;
+                UNINSTALL) 
+                    uninstall
+                    PS3="${bold}Enter the number of the menu option to perform:${normal} "
+                    break
+                    ;;
+                UPDATE) 
+                    update
+                    break
+                    ;;
+                EXIT) 
+                    exit 0
+                    break
+                    ;;
+                *) 
+                    PS3="${bold}Enter the number of the menu option to perform:${normal} "
+                    echo  "Invalid selection"
+                    break
+                    ;;
+            esac
+        done
     done
 }
 
