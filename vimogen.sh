@@ -8,11 +8,16 @@ manifest_file="$HOME/.vimogen_repos"
 bold=$(tput bold)
 normal=$(tput sgr0)
 arg1="$1"
+MSG=''
 
 usage() {
     printf "Usage:\n"
     printf "vimogen [-v]\n\n" 
     exit
+}
+
+pause() {
+   read -n 1 -p "Press any key to continue"
 }
 
 generate_manifest() {
@@ -39,6 +44,7 @@ validate_environment() {
     if [[ ! -f "$manifest_file" ]]; then
         printf "%s doesn't exist. Trying to generate from any existing bundles...\n" "$manifest_file"
         generate_manifest
+        pause
     fi
     
     if [[ ! -f "$manifest_file" ]]; then
@@ -48,7 +54,7 @@ validate_environment() {
 }
 
 install() {
-    printf "${bold}Installing plugins into $install_dir/...${normal}\n"
+    printf "${bold}Installing plugins into $install_dir/${normal}\n"
     pushd . > /dev/null
     local install_count=0
 
@@ -74,13 +80,15 @@ install() {
     else
         printf "Installed $install_count plugins\n"
     fi
+
+    pause
 }
 
 uninstall() {
     pushd . > /dev/null
     cd "$install_dir"
 
-    PS3="${bold}Enter the number of the plugin you wish to uninstall:${normal} "
+    PS3="Enter the number of the plugin you wish to uninstall: "
     while :
     do
         local plugins=()
@@ -90,9 +98,11 @@ uninstall() {
             fi
         done
         local sorted_plugins=($(printf '%s\n' "${plugins[@]}"|sort -f))
-        printf '\n%s\n' "------------------------------------------------------------------"
+        clear
+        printf "\n${bold}%s${normal}\n" "$MSG"
         select option in "CANCEL" "ALL" "${sorted_plugins[@]}"
         do
+            MSG=''
             case "$option" in
                 CANCEL) 
                     if [[ "$option" -eq "CANCEL" ]]; then
@@ -101,11 +111,12 @@ uninstall() {
                     break
                     ;;
                 ALL)
-                    read -n 1 -p "${bold}Delete all files from $install_dir/*: y/n?${normal} " prompt_rm
+                    read -n 1 -p "Delete all files from $install_dir/*: y/n? " prompt_rm
                     if [[ "$prompt_rm" = 'y' ]]; then
                         printf "\nUninstalling all plugins...\n"
                         rm -rf "$install_dir/"*
                         printf "Done\n"
+                        pause
                     fi
                     echo
                     break
@@ -114,10 +125,11 @@ uninstall() {
                     if [[ ! -z "$option" ]]; then
                         local path_to_rm="$install_dir/$option"
                         printf "Uninstalling $option"
+                        MSG="Uninstalled $option"
                         rm -rf "$path_to_rm"
                         echo
                     else
-                        printf "Invalid selection\n"
+                        MSG="Invalid selection"
                     fi
                     break
                     ;;
@@ -129,7 +141,7 @@ uninstall() {
 }
 
 update() {
-    printf "${bold}Updating...${normal}\n"
+    printf "Updating...\n"
     pushd . > /dev/null
     cd "$install_dir"
 
@@ -144,11 +156,11 @@ update() {
         printf "%s\n" "$pull"
 
         if [[ $pull = *vimogen* && $pull != *"Already up-to-date"* ]]; then
-            printf "${bold}Vimogen was updated! You should cp the updated script to your PATH${normal}\n"
+            MSG+="\nVimogen was updated! You should copy the new script to your PATH"
         fi
 
         if [[ $pull = *pathogen* && $pull != *"Already up-to-date"* ]]; then
-            printf "${bold}Pathogen was updated! You should cp ~/.vim/bundle/vim-pathogen/bundle/pathogen.vim to ~/.vim/autoload/${normal}\n"
+            MSG+="\nPathogen was updated. You should copy the new ~/.vim/bundle/vim-pathogen/bundle/pathogen.vim to ~/.vim/autoload/"
         fi
 
         echo -e
@@ -156,16 +168,18 @@ update() {
     done
 
     popd > /dev/null
+    pause
 }
 
 get_menu_opt() {
-    PS3="${bold}Enter the number of the menu option to perform:${normal} "
-
     while :
-    printf '\n%s\n' "------------------------------------------------------------------"
+    clear
+    PS3="Enter the number of the menu option to perform: "
+    printf "\n${bold}%s${normal}\n" "$MSG"
     do
         select option in INSTALL UNINSTALL UPDATE EXIT
         do
+            MSG=''
             case "$option" in
                 INSTALL) 
                     install
@@ -173,7 +187,6 @@ get_menu_opt() {
                     ;;
                 UNINSTALL) 
                     uninstall
-                    PS3="${bold}Enter the number of the menu option to perform:${normal} "
                     break
                     ;;
                 UPDATE) 
@@ -185,8 +198,7 @@ get_menu_opt() {
                     break
                     ;;
                 *) 
-                    PS3="${bold}Enter the number of the menu option to perform:${normal} "
-                    echo  "Invalid selection"
+                    MSG="Invalid selection"
                     break
                     ;;
             esac
