@@ -99,7 +99,7 @@ uninstall() {
         done
         local sorted_plugins=($(printf '%s\n' "${plugins[@]}"|sort -f))
         clear
-        printf "\n${bold}%s${normal}\n" "$MSG"
+        printf "\n${bold}%b${normal}\n" "$MSG"
         select option in "CANCEL" "ALL" "${sorted_plugins[@]}"
         do
             MSG=''
@@ -175,7 +175,7 @@ get_menu_opt() {
     while :
     clear
     PS3="Enter the number of the menu option to perform: "
-    printf "\n${bold}%s${normal}\n" "$MSG"
+    printf "\n${bold}%b${normal}\n" "$MSG"
     do
         select option in INSTALL UNINSTALL UPDATE EXIT
         do
