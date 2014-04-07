@@ -1,6 +1,6 @@
 #!/bin/bash
 # vimogen.sh by Ryan Kulla <rkulla@gmail.com>
-# version 1.4.1
+# version 1.4.2
 # License: Vim License. See :help license
 
 install_dir="$HOME/.vim/bundle"
@@ -100,6 +100,12 @@ uninstall() {
         local sorted_plugins=($(printf '%s\n' "${plugins[@]}"|sort -f))
         clear
         printf "\n${bold}%b${normal}\n" "$MSG"
+
+        local plugin_count="${#sorted_plugins[*]}"
+        if (( $plugin_count == 0 )); then
+            break
+        fi
+
         select option in "CANCEL" "ALL" "${sorted_plugins[@]}"
         do
             MSG=''
