@@ -76,9 +76,9 @@ install() {
     popd > /dev/null
 
     if [[ $install_count -eq 0 ]]; then
-        printf "Nothing new to install\n"
+        MSG="Nothing new to install\n"
     else
-        printf "Installed $install_count plugins\n"
+        MSG="Installed $install_count plugins\n"
     fi
 
     pause
@@ -152,6 +152,7 @@ update() {
     printf "Updating...\n"
     pushd . > /dev/null
     cd "$install_dir"
+    local updated=0
 
     for i in $(ls); do 
         pushd . > /dev/null
@@ -163,6 +164,7 @@ update() {
         fi
 
         if [[ $pull != *"Already up-to-date"* ]]; then
+            updated=1
             printf "%s\n\n" "$pull"
         fi
 
@@ -176,6 +178,10 @@ update() {
 
         popd > /dev/null
     done
+
+    if (( $updated == 0 )); then
+        MSG+="No plugins had updates at this time.\n"
+    fi
 
     popd > /dev/null
 
