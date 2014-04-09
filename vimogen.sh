@@ -97,12 +97,14 @@ uninstall() {
                 plugins+=( "$clone_dir" )
             fi
         done
+
         local sorted_plugins=($(printf '%s\n' "${plugins[@]}"|sort -f))
         clear
         printf "\n${bold}%b${normal}\n" "$MSG"
 
         local plugin_count="${#sorted_plugins[*]}"
         if (( $plugin_count == 0 )); then
+            MSG="No plugins are currently installed\n"
             break
         fi
 
@@ -176,7 +178,12 @@ update() {
     done
 
     popd > /dev/null
-    pause
+
+    if test "$i"; then
+        pause
+    else
+        MSG="No plugins are currently installed\n"
+    fi
 }
 
 get_menu_opt() {
