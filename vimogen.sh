@@ -3,6 +3,9 @@
 # version 1.4.2
 # License: Vim License. See :help license
 
+# If any command fails, abort the script
+set -e
+
 install_dir="$HOME/.vim/bundle"
 manifest_file="$HOME/.vimogen_repos"
 bold=$(tput bold)
