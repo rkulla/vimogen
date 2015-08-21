@@ -26,10 +26,10 @@ Simply create a manifest file in your home directory called .vimogen_repos
 (or let vimogen generate one for you) and put Git clone URLs to Vim plug-in
 repositories inside of it -- one line at a time -- like:
     
-    git://github.com/tpope/vim-sensible.git
-    git://github.com/tpope/vim-surround.git
-    git://github.com/scrooloose/nerdtree.git
-    git://github.com/tomasr/molokai.git
+    https://github.com/tpope/vim-sensible.git
+    https://github.com/tpope/vim-surround.git
+    https://github.com/scrooloose/nerdtree.git
+    https://github.com/tomasr/molokai.git
     ...
 
 Note: You can alternatively use the https:// clone URLs.
@@ -63,7 +63,7 @@ to edit .vimogen_repos yourself when you want to install more plugins.
 
 Next, run:
 
-    git clone git://github.com/rkulla/vimogen.git
+    git clone https://github.com/rkulla/vimogen.git
     chmod u+x vimogen.sh
     cp vimogen.sh ~/bin/vimogen 
     
