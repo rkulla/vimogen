@@ -32,8 +32,6 @@ repositories inside of it -- one line at a time -- like:
     https://github.com/tomasr/molokai.git
     ...
 
-Note: You can alternatively use the https:// clone URLs.
-
 Don't worry, finding Git URLs for all of your plugins is actually very easy 
 because vim.org mirrors them all on github <a href="https://github.com/vim-scripts">here</a>.
 You can also use bitbucket or any other git repository location if you need to.
