@@ -75,10 +75,10 @@ Note: You can append new plugin repos to the .vimogen_repos file later and insta
 
 *    Choosing __UNINSTALL__ gives you a list of all your plugins:
 
-         1) CANCEL                8) tabular             15) vimogen
-         2) ctrlp                 9) taglist             16) vim-pathogen
-         3) molokai              10) tComment            17) vim-rails
-         4) nerdtree             11) tlib_vim            18) vim-repeat
+         1) BACK                  8) tabular             15) vimogen
+         2) ALL                   9) taglist             16) vim-pathogen
+         3) ctrlp                10) tComment            17) vim-rails
+         4) molokai              11) tlib_vim            18) vim-repeat
          5) pydiction            12) vcscommand          19) vim-snipmate
          6) python-mode          13) vim-addon-mw-utils  20) vim-surround
          7) snipmate-snippets    14) vim-jade            21) ZenCoding

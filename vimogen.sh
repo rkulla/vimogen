@@ -111,12 +111,12 @@ uninstall() {
             break
         fi
 
-        select option in "CANCEL" "ALL" "${sorted_plugins[@]}"
+        select option in "BACK" "ALL" "${sorted_plugins[@]}"
         do
             MSG=''
             case "$option" in
-                CANCEL) 
-                    if [[ "$option" -eq "CANCEL" ]]; then
+                BACK) 
+                    if [[ "$option" -eq "BACK" ]]; then
                         return 0
                     fi
                     break
