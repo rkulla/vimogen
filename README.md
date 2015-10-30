@@ -14,7 +14,6 @@ You can also use bitbucket or any other git repository location if you need to.
 Requirements
 ============
 * A Unix-like system (Linux, OS X, etc.) and Git.
-
 * The [Pathogen](https://github.com/tpope/vim-pathogen/ "Pathogen") plugin for Vim.
 
 Installation
@@ -99,48 +98,25 @@ vim-pathogen.
 
 FAQ
 ===
-__Q: What is pathogen?__
-
-A: Pathogen has become the de-facto standard way of activating Vim plugins
-that were installed in modular way into their own directories, rather than
-unzip'ing all plugins into the same directory. Vimogen assumes that you are 
-using Pathogen, so install Pathogen first, which is as easy as following the
-simple steps <a href="https://github.com/tpope/vim-pathogen">here</a>.
-
-__Q: Where can I find git URLs for Vim plugins?__
-
-A: All of the plugins from vim.org are mirrored on https://github.com/vim-scripts
-
-__Q: I downloaded a Vim plugin as a .zip file. What should I do?__
-
-A: Vimogen doesn't use zip files, it uses git repositories. All of
-the plugins from vim.org are mirrored on https://github.com/vim-scripts so
-find it on there and put its github clone URL into ~/.vimogen_repos. If
-a plugin you want is not mirrored, i's probably still somewhere on github
-or somewhere if you search for it.
-
-__Q: What is this $HOME/.vimogen_repos file about?__
-
-A: It is simply a text file that consists of git URLs to the Vim plugins you
-want to install. If you don't have any new plugins you wish to install, you
-can still use vimogen to update or uninstall your existing plugins as long
-as they were installed as Pathogen bundles. Vimogen will look in your bundle
-directory and generate a $HOME/.vimogen_repos for you the first time you run 
-it. Note that for this to work your existing bundles must also contain git 
-repositories.
-
 __Q: Can Vimogen install Vim color schemes, like Molokai?__
 
 A: Yes. Anything that works with Pathogen (which is almost everything)
 will work with Vimogen.
 
+__Q: I downloaded a Vim plugin as a .zip file. What should I do?__
+
+A: Vimogen doesn't use zip files, it uses git repos. All of
+the plugins from vim.org are mirrored on https://github.com/vim-scripts so
+find it on there and put its github clone URL into ~/.vimogen_repos. If
+a plugin you want is not mirrored, it's probably still somewhere on github
+or somewhere if you search.
+
 __Q: I already use Dropbox (or similar) to keep my .vim/ directory synchronized. 
-Why do I need something like Vimogen?__
+Why should I use Vimogen?__
 
 A: Even if you've created a symlink from ~/.vim/ to ~/Dropbox/path/to/.vim/, that
 will only help you keep your existing versions of plugins synchronized. Vimogen 
-allows you to also automatically pull from all your plugins' git repositories in
-order to keep them up-to-date.
+allows you to also automatically pull from all your plugins' git repos keep up-to-date.
 
 License
 =======
