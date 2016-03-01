@@ -1,15 +1,15 @@
 
-Vimogen is a simple cli tool to install, update and remove <a href="http://www.vim.org/>Vim</a> plugins. It can also help you keep plugins synchronized across multiple vim installations.
+Vimogen is a simple cli tool to install, update and remove <a href="http://www.vim.org/">Vim</a> plugins. It can also help you keep plugins synchronized across multiple vim installations.
 
 It requires no configuration (just a manifest file). Vimogen uses <a href="https://github.com/tpope/vim-pathogen/">Pathogen</a>, which lets you store all of your plugins in one place as git checkouts.
 
 Motivation: Many plugins I use (vim-rails, syntastic, etc) get updated a lot and I wanted an easy way to keep my copies updated. I also wanted a better way to install all my favorite plugins whenever I install a new operating system. The alternatives either didn't use git or required configuration and other stuff I didn't like. 
 
-With Vimogen, you can use the same `.vimrc` across multiple machines but have separate manifest files for each machine. This is useful if you don't want to use development plugins on a production machine, and so on.
+With Vimogen, you can use the same `.vimrc` across multiple machines, but have separate manifest files for each machine. This is useful if you don't want to use development plugins on a production machine, and so on.
 
 Don't worry, finding Git URLs for all of your plugins is actually very easy 
-because vim.org mirrors them all on github <a href="https://github.com/vim-scripts">here</a>.
-You can also use bitbucket or any other git repository location if you need to.
+because vim.org mirrors them all on Github <a href="https://github.com/vim-scripts">here</a>.
+You can also use Bitbucket or any other git repository location if you need to.
 
 Requirements
 ============
@@ -108,7 +108,7 @@ __Q: I downloaded a Vim plugin as a .zip file. What should I do?__
 A: Vimogen doesn't use zip files, it uses git repos. All of
 the plugins from vim.org are mirrored on https://github.com/vim-scripts so
 find it on there and put its github clone URL into ~/.vimogen_repos. If
-a plugin you want is not mirrored, it's probably still somewhere on github
+a plugin you want is not mirrored, it's probably still somewhere on Github
 or somewhere if you search.
 
 __Q: I already use Dropbox (or similar) to keep my .vim/ directory synchronized. 
