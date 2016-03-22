@@ -51,13 +51,13 @@ validate_environment() {
     fi
     
     if [[ ! -f "$manifest_file" ]]; then
-        printf "[failed].\nPlease create $manifest_file.\n"
+        printf "[failed].\nPlease create %s.\n" "$manifest_file"
         exit 0
     fi
 }
 
 install() {
-    printf "${bold}Installing plugins into $install_dir/${normal}\n"
+    printf "${bold}Installing plugins into %s/${normal}\n" "$install_dir"
     pushd . > /dev/null
     local install_count=0
 
@@ -135,7 +135,7 @@ uninstall() {
                 *)
                     if [[ ! -z "$option" ]]; then
                         local path_to_rm="$install_dir/$option"
-                        printf "Uninstalling $option"
+                        printf "Uninstalling %s" "$option"
                         MSG="Uninstalled $option"
                         rm -rf "$path_to_rm"
                         echo
