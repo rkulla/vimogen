@@ -30,7 +30,7 @@ to edit .vimogen_repos yourself when you want to add more plugins.
 
 Then run:
 
-    git clone https://github.com/rkulla/vimogen.git
+    git clone https://github.com/rkulla/vimogen
     chmod u+x vimogen.sh
     cp vimogen.sh ~/bin/vimogen 
     
@@ -42,10 +42,10 @@ With Vimogen, you create a manifest file called `~/.vimogen_repos`
 (or let vimogen generate one for you) and put Git clone URLs to Vim plug-in
 repositories inside of it -- one line at a time -- like:
     
-    https://github.com/tpope/vim-sensible.git
-    https://github.com/tpope/vim-surround.git
-    https://github.com/scrooloose/nerdtree.git
-    https://github.com/tomasr/molokai.git
+    https://github.com/tpope/vim-sensible
+    https://github.com/tpope/vim-surround
+    https://github.com/scrooloose/nerdtree
+    https://github.com/tomasr/molokai
     ...
 
 <a href="https://github.com/vim-scripts">Find vim URLs here</a>.

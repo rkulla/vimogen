@@ -65,7 +65,7 @@ install() {
 
     while read -r line; do
         local basename=${line##*/}
-        local clone_dir="${basename%.*}" # take out the .git
+        local clone_dir="${basename%.*}" # remove .git extension, if any.
         if [[ "$clone_dir" = *.vim ]]; then
             clone_dir="${clone_dir%.vim}" # take out the .vim
         fi
