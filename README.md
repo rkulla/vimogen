@@ -33,7 +33,7 @@ Then run:
     git clone https://github.com/rkulla/vimogen
     chmod u+x vimogen
     
-can copy vimogen to your $PATH.
+and copy vimogen to your $PATH.
 
 Usage
 =====
