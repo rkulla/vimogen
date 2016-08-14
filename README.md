@@ -1,5 +1,5 @@
 
-Vimogen is a simple cli tool to install, update and remove <a href="http://www.vim.org/">Vim</a> plugins. It can also help you keep plugins synchronized across multiple vim installations.
+Vimogen is a small utility that installs, updates or removes <a href="http://www.vim.org/">Vim</a> plugins. It can also help you keep plugins synchronized across multiple vim installations.
 
 It requires no configuration (just a manifest file). Vimogen uses <a href="https://github.com/tpope/vim-pathogen/">Pathogen</a>, which lets you store all of your plugins in one place as git checkouts.
 
