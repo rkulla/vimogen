@@ -13,7 +13,7 @@ You can also use Bitbucket or any other git repository location if you need to.
 
 Requirements
 ============
-* A Unix-like system (Linux, OS X, etc.) and Git.
+* Bash and git.
 * The [Pathogen](https://github.com/tpope/vim-pathogen/ "Pathogen") plugin for Vim.
 
 Installation
@@ -31,10 +31,9 @@ to edit .vimogen_repos yourself when you want to add more plugins.
 Then run:
 
     git clone https://github.com/rkulla/vimogen
-    chmod u+x vimogen.sh
-    cp vimogen.sh ~/bin/vimogen 
+    chmod u+x vimogen
     
-or put it somewhere else in your $PATH if you don't use ~/bin.
+can copy vimogen to your $PATH.
 
 Usage
 =====
@@ -93,7 +92,7 @@ then whenever you want it back just run vimogen's INSTALL again.
 
 TIP: Keep a reference to the vimogen repository in .vimogen_repos and it will show you
 if a new version was updated whenever you run the update command. Then all you have to do is
-copy the updated vimogen.sh file to your PATH to have the latest version. Do the same for
+copy the updated vimogen file to your PATH to have the latest version. Do the same for
 vim-pathogen.
 
 FAQ
