@@ -13,7 +13,7 @@ You can also use Bitbucket or any other git repository location if you need to.
 
 Requirements
 ============
-* Bash and git.
+* Bash, perl and git.
 * The [Pathogen](https://github.com/tpope/vim-pathogen/ "Pathogen") plugin for Vim.
 
 Installation
