@@ -37,7 +37,7 @@ and copy vimogen to your $PATH.
 
 Usage
 =====
-With Vimogen, you create a manifest file called `~/.vimogen_repos`
+First create a manifest file called `~/.vimogen_repos`
 (or let vimogen generate one for you) and put Git clone URLs to Vim plug-in
 repositories inside of it -- one line at a time -- like:
     
