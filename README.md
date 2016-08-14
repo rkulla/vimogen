@@ -17,9 +17,7 @@ Requirements
 
 Installation
 ============
-Create a manifest file called $HOME/.vimogen_repos that consists
-of just Git URLs. It's just a plain-text file with a git repo on each line. 
-Have a look at [my .vimogen_repos file](https://github.com/rkulla/vimrc/blob/master/.vimogen_repos) for an example.
+Create a file called $HOME/.vimogen_repos that consists of just Git URLs. It's just a plain-text file with a git repo on each line. See [my .vimogen_repos file](https://github.com/rkulla/vimrc/blob/master/.vimogen_repos) for an example.
 
 Vimogen auto-generates `$HOME/.vimogen_repos` if you run it
 without creating the file first. It generates based off the
