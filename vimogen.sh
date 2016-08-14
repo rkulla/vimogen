@@ -230,7 +230,7 @@ get_menu_opt() {
     done
 }
 
-if (( $# > 1 )); then
+if (( $# > 0 )) && ! [[ $arg1 = "-v" ]]; then
     usage
 else
     validate_environment
