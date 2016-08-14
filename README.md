@@ -1,6 +1,6 @@
 Vimogen is a small utility that installs, updates or removes <a href="http://www.vim.org/">Vim</a> plugins. It can also help you keep plugins synchronized across multiple vim installations.
 
-It requires no configuration, just a text file with a list of git repositories to the plugins you use. Vimogen uses <a href="https://github.com/tpope/vim-pathogen/">Pathogen</a>, which lets you store all of your plugins in one place as git checkouts.
+It requires no configuration, just a text file with a list of git repositories to the plugins you use. Vimogen uses <a href="https://github.com/tpope/vim-pathogen/">Pathogen</a> which lets you store all of your plugins in one place, as Git checkouts.
 
 Motivation: Many plugins I use (vim-go, syntastic, etc.) get updated a lot and I wanted an easy way to keep my copies updated. I also wanted a better way to install all my favorite plugins whenever I install a new operating system. The alternatives either didn't use git or required configuration and other stuff I didn't like. 
 
