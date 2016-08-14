@@ -50,9 +50,7 @@ Run vimogen without arguments:
 
     $ vimogen
 
-or, for more verbose output:
-
-    $ vimogen -v
+For more verbose output, use the `-v` flag.
 
 It will give you a menu of items to choose from:
 
