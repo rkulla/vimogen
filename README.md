@@ -1,6 +1,6 @@
 Vimogen is a small utility that installs, updates or removes <a href="http://www.vim.org/">Vim</a> plugins. It can also keep your plugins synchronized across multiple Vim installs.
 
-It requires no configuration, just a text file with a list of git repositories to the plugins you use. Vimogen uses <a href="https://github.com/tpope/vim-pathogen/">Pathogen</a> which lets you store all of your plugins in one place, as Git checkouts.
+It requires no configuration, just a text file with a list of Git repositories URLs to the plugins you use. Vimogen uses <a href="https://github.com/tpope/vim-pathogen/">Pathogen</a> which lets you store all of your plugins in one place, as Git checkouts.
 
 Motivation: Many plugins that I use (vim-go, syntastic, etc.) get updated a lot and I wanted an easy way to keep my copies updated. I also wanted a better way to install all of my favorite plugins quickly whenever I install a new operating system. The alternatives either didn't use git or required configuration and other stuff I didn't like. 
 
@@ -8,7 +8,7 @@ With Vimogen, you can use the same `.vimrc` across multiple machines, but have s
 
 Don't worry, finding Git URLs for all of your plugins is actually very easy 
 because vim.org mirrors them all on Github <a href="https://github.com/vim-scripts">here</a>.
-You can also use Bitbucket or any other git repository location if you need to.
+You can also use Bitbucket or any other Git repository location if you need to.
 
 Requirements
 ============
@@ -18,7 +18,7 @@ Requirements
 Installation
 ============
 Create a manifest file called $HOME/.vimogen_repos that consists
-of just git repositories. It's just a plain-text file with a git repo on each line. 
+of just Git URLs. It's just a plain-text file with a git repo on each line. 
 Have a look at [my .vimogen_repos file](https://github.com/rkulla/vimrc/blob/master/.vimogen_repos) for an example.
 
 Vimogen auto-generates `$HOME/.vimogen_repos` if you run it
