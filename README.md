@@ -27,8 +27,8 @@ to edit .vimogen_repos yourself when you want to add more plugins.
 
 Then run:
 
-    git clone https://github.com/rkulla/vimogen
-    chmod u+x vimogen
+    $ git clone https://github.com/rkulla/vimogen
+    $ chmod u+x vimogen
     
 and copy vimogen to your $PATH.
 
