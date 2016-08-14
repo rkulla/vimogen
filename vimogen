@@ -163,7 +163,7 @@ update() {
         if [[ $arg1 = "-v" ]]; then
             local pull=$(git pull --verbose)
         else
-            local pull=$(git pull --verbose 2>&1 | awk 'NR==1;END{print}')
+            local pull=$(git pull --verbose 2>&1 | awk 'NR==2;END{print}')
         fi
 
         if [[ $pull != *"Already up-to-date"* ]]; then
