@@ -1,26 +1,23 @@
+Vimogen is a small utility that installs, updates or removes <a href="http://www.vim.org/">Vim</a> plugins. It can also keep your plugins synchronized across multiple Vim installs.
 
-Vimogen is a simple cli tool to install, update and remove <a href="http://www.vim.org/">Vim</a> plugins. It can also help you keep plugins synchronized across multiple vim installations.
+Requiring no configuration -- just a text file with a list of Git repositories URLs to the plugins you use -- Vimogen uses <a href="https://github.com/tpope/vim-pathogen/">Pathogen</a> which lets you store all of your plugins in one place, as Git checkouts.
 
-It requires no configuration (just a manifest file). Vimogen uses <a href="https://github.com/tpope/vim-pathogen/">Pathogen</a>, which lets you store all of your plugins in one place as git checkouts.
-
-Motivation: Many plugins I use (vim-rails, syntastic, etc) get updated a lot and I wanted an easy way to keep my copies updated. I also wanted a better way to install all my favorite plugins whenever I install a new operating system. The alternatives either didn't use git or required configuration and other stuff I didn't like. 
+Motivation: Many plugins that I use (vim-go, syntastic, etc.) get updated a lot and I wanted an easy way to keep my copies updated. I also wanted a better way to install all of my favorite plugins at once whenever I install a new operating system. The alternatives either didn't use Git or required configuration and other stuff I didn't like. 
 
 With Vimogen, you can use the same `.vimrc` across multiple machines, but have separate manifest files for each machine. This is useful if you don't want to use development plugins on a production machine, and so on.
 
 Don't worry, finding Git URLs for all of your plugins is actually very easy 
 because vim.org mirrors them all on Github <a href="https://github.com/vim-scripts">here</a>.
-You can also use Bitbucket or any other git repository location if you need to.
+You can also use Bitbucket or any other Git repository location if you need to.
 
 Requirements
 ============
-* Bash and git.
+* Bash, perl and git.
 * The [Pathogen](https://github.com/tpope/vim-pathogen/ "Pathogen") plugin for Vim.
 
 Installation
 ============
-Create a manifest file called $HOME/.vimogen_repos that consists
-of just git repositories. It's just a plain-text file with a git repo on each line. 
-Have a look at [my .vimogen_repos file](https://github.com/rkulla/vimrc/blob/master/.vimogen_repos) for an example.
+Create a file called $HOME/.vimogen_repos that consists of just Git URLs. It's just a plain-text file with a git repo on each line. See [my .vimogen_repos file](https://github.com/rkulla/vimrc/blob/master/.vimogen_repos) for an example.
 
 Vimogen auto-generates `$HOME/.vimogen_repos` if you run it
 without creating the file first. It generates based off the
@@ -30,14 +27,14 @@ to edit .vimogen_repos yourself when you want to add more plugins.
 
 Then run:
 
-    git clone https://github.com/rkulla/vimogen
-    chmod u+x vimogen
+    $ git clone https://github.com/rkulla/vimogen
+    $ chmod u+x vimogen
     
-can copy vimogen to your $PATH.
+and copy vimogen to your $PATH.
 
 Usage
 =====
-With Vimogen, you create a manifest file called `~/.vimogen_repos`
+First create a manifest file called `~/.vimogen_repos`
 (or let vimogen generate one for you) and put Git clone URLs to Vim plug-in
 repositories inside of it -- one line at a time -- like:
     
@@ -53,9 +50,7 @@ Run vimogen without arguments:
 
     $ vimogen
 
-or, for more verbose output:
-
-    $ vimogen -v
+For more verbose output, use the `-v` flag.
 
 It will give you a menu of items to choose from:
 
