@@ -1,3 +1,5 @@
+# vimogen
+
 Vimogen is a small utility that installs, updates or removes <a href="http://www.vim.org/">Vim</a> plugins. It can also keep your plugins synchronized across multiple Vim installs.
 
 Requiring no configuration -- just a text file with a list of Git repositories URLs to the plugins you use -- Vimogen uses <a href="https://github.com/tpope/vim-pathogen/">Pathogen</a> which lets you store all of your plugins in one place, as Git checkouts.
@@ -10,13 +12,13 @@ Don't worry, finding Git URLs for all of your plugins is actually very easy
 because vim.org mirrors them all on Github <a href="https://github.com/vim-scripts">here</a>.
 You can also use Bitbucket or any other Git repository location if you need to.
 
-Requirements
-============
+## Requirements
+
 * Bash, perl and git.
 * The [Pathogen](https://github.com/tpope/vim-pathogen/ "Pathogen") plugin for Vim.
 
-Installation
-============
+## Installation
+
 Create a file called $HOME/.vimogen_repos that consists of just Git URLs. It's just a plain-text file with a git repo on each line. See [my .vimogen_repos file](https://github.com/rkulla/vimrc/blob/master/.vimogen_repos) for an example.
 
 Vimogen auto-generates `$HOME/.vimogen_repos` if you run it
@@ -32,8 +34,8 @@ Then run:
     
 and copy vimogen to your $PATH.
 
-Usage
-=====
+## Usage
+
 First create a manifest file called `~/.vimogen_repos`
 (or let vimogen generate one for you) and put Git clone URLs to Vim plug-in
 repositories inside of it -- one line at a time -- like:
@@ -86,8 +88,8 @@ Choosing `3` to __UPDATE__ runs a `git pull` on all of your bundles:
 
 Choosing `4` to __EXIT__ is a good idea because returning to the main menu will show you any notifications about things that happened (at the top of the screen). So don't just Ctrl+C to exit out of menus.
 
-Tips
-====
+## Tips
+
 - If you ever want to temporarily disable a plugin, just use vimogen to UNINSTALL it, 
 then whenever you want it back just run vimogen's INSTALL again.
 
@@ -96,8 +98,8 @@ if a new version was updated whenever you run the update command. Then all you h
 copy the updated vimogen file to your PATH to have the latest version. Do the same for
 vim-pathogen.
 
-FAQ
-===
+## FAQ
+
 > Can Vimogen install Vim color schemes, like Molokai?__
 
 Yes. Anything that works with Pathogen (which is almost everything)
@@ -118,6 +120,6 @@ Even if you've created a symlink from ~/.vim/ to ~/Dropbox/path/to/.vim/, that
 will only help you keep your existing versions of plugins synchronized. Vimogen 
 allows you to also automatically pull from all your plugins' git repos keep up-to-date.
 
-License
-=======
+## License
+
 Copyright (c) Ryan Kulla. Distributed under the same terms as Vim itself. See :help license
