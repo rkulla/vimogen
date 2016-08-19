@@ -80,7 +80,7 @@ Choosing `2` to __UNINSTALL__ gives you a list of all your plugins:
          7) snipmate-snippets    14) vim-jade            21) ZenCoding
          Enter the number of the plugin you wish to uninstall:
 
-Press `1` to cancel or `2` to remove all your plugins at once.
+Press `1` to cancel and go back to the main menu or `2` to remove all of your plugins at once.
     
 Choosing `3` to __UPDATE__ runs a `git pull` on all of your bundles:
 
