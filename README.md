@@ -84,10 +84,12 @@ Choosing `3` to __UPDATE__ runs a `git pull` on all of your bundles:
 
 ![update](https://cloud.githubusercontent.com/assets/244283/17818417/5505c364-65f8-11e6-8dfc-0797c96cd06b.png)
 
-TIP: If you ever want to temporarily disable a plugin, just use vimogen to UNINSTALL it, 
+Tips
+====
+- If you ever want to temporarily disable a plugin, just use vimogen to UNINSTALL it, 
 then whenever you want it back just run vimogen's INSTALL again.
 
-TIP: Keep a reference to the vimogen repository in .vimogen_repos and it will show you
+- Keep a reference to the vimogen repository in .vimogen_repos and it will show you
 if a new version was updated whenever you run the update command. Then all you have to do is
 copy the updated vimogen file to your PATH to have the latest version. Do the same for
 vim-pathogen.
