@@ -86,7 +86,6 @@ Choosing `3` to __UPDATE__ runs a `git pull` on all of your bundles:
 
 ![update](https://cloud.githubusercontent.com/assets/244283/17818417/5505c364-65f8-11e6-8dfc-0797c96cd06b.png)
 
-Choosing `4` to __EXIT__ is a good idea because returning to the main menu will show you any notifications about things that happened (at the top of the screen). So don't just Ctrl+C to exit out of menus.
 
 ## Tips
 
