@@ -96,23 +96,23 @@ vim-pathogen.
 
 FAQ
 ===
-__Q: Can Vimogen install Vim color schemes, like Molokai?__
+> Can Vimogen install Vim color schemes, like Molokai?__
 
-A: Yes. Anything that works with Pathogen (which is almost everything)
+Yes. Anything that works with Pathogen (which is almost everything)
 will work with Vimogen.
 
-__Q: I downloaded a Vim plugin as a .zip file. What should I do?__
+> I downloaded a Vim plugin as a .zip file. What should I do?__
 
-A: Vimogen doesn't use zip files, it uses git repos. All of
+Vimogen doesn't use zip files, it uses git repos. All of
 the plugins from vim.org are mirrored on https://github.com/vim-scripts so
 find it on there and put its github clone URL into ~/.vimogen_repos. If
 a plugin you want is not mirrored, it's probably still somewhere on Github
 or somewhere if you search.
 
-__Q: I already use Dropbox (or similar) to keep my .vim/ directory synchronized. 
+> I already use Dropbox (or similar) to keep my .vim/ directory synchronized. 
 Why should I use Vimogen?__
 
-A: Even if you've created a symlink from ~/.vim/ to ~/Dropbox/path/to/.vim/, that
+Even if you've created a symlink from ~/.vim/ to ~/Dropbox/path/to/.vim/, that
 will only help you keep your existing versions of plugins synchronized. Vimogen 
 allows you to also automatically pull from all your plugins' git repos keep up-to-date.
 
