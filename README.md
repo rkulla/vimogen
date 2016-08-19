@@ -62,12 +62,12 @@ It will give you a menu of items to choose from:
 
 For example, typing `1` will install all the plugins listed in .vimogen_repos.
 
-*    Choosing __INSTALL__ clones all the repos from .vimogen_repos into your Pathogen dir (~/.vim/bundle).
+Choosing __INSTALL__ clones all the repos from .vimogen_repos into your Pathogen dir (~/.vim/bundle).
 Skipping ones that already exist. 
 
 Note: You can append new plugin repos to the .vimogen_repos file later and install them incrementally by re-running Vimogen's install command.
 
-*    Choosing __UNINSTALL__ gives you a list of all your plugins:
+Choosing `2` to __UNINSTALL__ gives you a list of all your plugins:
 
          1) BACK                  8) tabular             15) vimogen
          2) ALL                   9) taglist             16) vim-pathogen
@@ -80,7 +80,9 @@ Note: You can append new plugin repos to the .vimogen_repos file later and insta
 
 Press 1 to cancel. 2 to remove all your plugins at once.
     
-*    Choosing __UPDATE__ runs a `git pull` on all of your bundles. 
+Choosing `3` to __UPDATE__ runs a `git pull` on all of your bundles. 
+
+![update](https://cloud.githubusercontent.com/assets/244283/17818417/5505c364-65f8-11e6-8dfc-0797c96cd06b.png)
 
 TIP: If you ever want to temporarily disable a plugin, just use vimogen to UNINSTALL it, 
 then whenever you want it back just run vimogen's INSTALL again.
