@@ -177,11 +177,11 @@ update() {
         fi
 
         if [[ $pull = *vimogen* && $pull != *"Already up-to-date"* ]]; then
-            MSG+="\nVimogen was updated! You should copy the new script to your PATH"
+            MSG+="\nVimogen was updated! You should cp $install_dir/vimogen/vimogen to your \$PATH"
         fi
 
         if [[ $pull = *pathogen* && $pull != *"Already up-to-date"* ]]; then
-            MSG+="\nPathogen was updated. You should copy the new ~/.vim/bundle/vim-pathogen/bundle/pathogen.vim to ~/.vim/autoload/"
+            MSG+="\nPathogen was updated. You should cp $install_dir/vim-pathogen/bundle/pathogen.vim ~/.vim/autoload/"
         fi
 
         popd > /dev/null
