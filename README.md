@@ -54,6 +54,10 @@ Run vimogen without arguments:
 
 For more verbose output, use the `-v` flag.
 
+To output the current contents of your .vimogen_repos file, add the 'heap' argument:
+
+    $ vimogen heap
+
 It will give you a menu of items to choose from:
 
     1) INSTALL
