@@ -19,13 +19,9 @@ You can also use Bitbucket or any other Git repository location if you need to.
 
 ## Installation
 
-Create a file called $HOME/.vimogen_repos that consists of just Git URLs. It's just a plain-text file with a git repo on each line. See [my .vimogen_repos file](https://github.com/rkulla/vimrc/blob/master/.vimogen_repos) for an example.
+Create a text file called `$HOME/.vimogen_repos` and add a list of Git URLs to the Vim plugin repositories you use, one URL per line. Vim.org mirrors them all plugins to Github <a href="https://github.com/vim-scripts">here</a>. See [my .vimogen_repos file](https://github.com/rkulla/vimrc/blob/master/.vimogen_repos) for an example.
 
-Vimogen auto-generates `$HOME/.vimogen_repos` if you run it
-without creating the file first. It generates based off the
-current Pathogen bundles you already have. This allows you to
-update or uninstall any existing plugins you have. You'll only need
-to edit .vimogen_repos yourself when you want to add more plugins.
+Alternatively, vimogen will auto-generate `$HOME/.vimogen_repos` if you run it without creating the file first. It generates based off the current Pathogen bundles you already have. This allows you to update or uninstall any existing plugins you have. You'll only need to edit .vimogen_repos yourself when you want to add more plugins.
 
 Then run:
 
