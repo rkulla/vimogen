@@ -14,7 +14,7 @@ You can also use Bitbucket or any other Git repository location if you need to.
 
 ## Requirements
 
-* Bash, perl & git.
+* A unix-like operating system (OS-X, Linux, etc. running with Bash) (Most operating systems already have these)
 * The Vim plug-in: [Pathogen](https://github.com/tpope/vim-pathogen/ "Pathogen")
 
 ## Installation
