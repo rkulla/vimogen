@@ -15,7 +15,7 @@ MSG=''
 
 usage() {
     printf "Usage:\n"
-    printf "vimogen [-v]\n\n" 
+    printf "vimogen [-v|heap]\n\n" 
     exit
 }
 
@@ -53,6 +53,11 @@ validate_environment() {
     if [[ ! -f "$manifest_file" ]]; then
         printf "[failed].\nPlease create %s.\n" "$manifest_file"
         exit 0
+    fi
+
+    if [[ $arg1 = "heap" ]]; then
+        cat "$manifest_file"
+        exit 1
     fi
 }
 
@@ -230,7 +235,7 @@ get_menu_opt() {
     done
 }
 
-if (( $# > 0 )) && ! [[ $arg1 = "-v" ]]; then
+if (( $# > 0 )) && ! [[ $arg1 = "-v" ]] && ! [[ $arg1 = "heap" ]]; then
     usage
 else
     validate_environment
