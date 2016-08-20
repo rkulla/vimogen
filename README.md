@@ -121,7 +121,7 @@ Why should I use Vimogen?__
 
 Even if you've created a symlink from ~/.vim/ to ~/Dropbox/path/to/.vim/, that
 will only help you keep your existing versions of plugins synchronized. Vimogen 
-allows you to also automatically pull from all your plugins' git repos keep up-to-date.
+also pulls from all your plugins' Git repositories to keep them updated.
 
 ## License
 
