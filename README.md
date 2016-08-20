@@ -15,7 +15,7 @@ You can also use Bitbucket or any other Git repository location if you need to.
 ## Requirements
 
 * Bash, perl & git.
-* The [Pathogen](https://github.com/tpope/vim-pathogen/ "Pathogen") plugin for Vim.
+* The Vim plugin: [Pathogen](https://github.com/tpope/vim-pathogen/ "Pathogen")
 
 ## Installation
 
