@@ -51,12 +51,6 @@ Run vimogen without arguments:
 
     $ vimogen
 
-For more verbose output, use the `-v` flag.
-
-To output the current contents of your .vimogen_repos file, add the 'heap' argument:
-
-    $ vimogen heap
-
 It will give you a menu of items to choose from:
 
     1) INSTALL
@@ -89,6 +83,17 @@ Choosing `3` to __UPDATE__ runs a `git pull` on all of your bundles:
 
 ![update](https://cloud.githubusercontent.com/assets/244283/17818417/5505c364-65f8-11e6-8dfc-0797c96cd06b.png)
 
+### Command-line options
+
+To update vimogen straight from the command-line just pass the update argument (useful for scripts/cron jobs):
+
+    $ vimogen update
+
+To output the current contents of your .vimogen_repos file, add the 'heap' argument:
+
+    $ vimogen heap
+
+For more verbose output, use the `-v` flag (not recommended for normal use).
 
 ## Tips
 
