@@ -14,7 +14,7 @@ You can also use Bitbucket or any other Git repository location if you need to.
 
 ## Requirements
 
-* A unix-like operating system (Linux, OS X, etc. with bash installed) (Most operating systems already have these)
+* A unix-like operating system (Linux, OS X, etc. with bash installed)
 * The Vim plug-in: [Pathogen](https://github.com/tpope/vim-pathogen/ "Pathogen")
 
 ## Installation
@@ -31,9 +31,7 @@ Then run:
 
 ## Usage
 
-First create a manifest file called `~/.vimogen_repos`
-(or let vimogen generate one for you) and put Git clone URLs to Vim plug-in
-repositories inside of it -- one line at a time -- like:
+Add Git URLs to `~/.vimogen_repos`--one line at a time--like:
     
     https://github.com/tpope/vim-sensible
     https://github.com/tpope/vim-surround
@@ -41,7 +39,7 @@ repositories inside of it -- one line at a time -- like:
     https://github.com/tomasr/molokai
     ...
 
-<a href="https://github.com/vim-scripts">Find vim URLs here</a>.
+(<a href="https://github.com/vim-scripts">Find github hosted Vim plugin URLs here</a>)
 
 Run vimogen without arguments:
 
