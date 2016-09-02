@@ -68,7 +68,7 @@ Choosing `2` to __UNINSTALL__ gives you a list of all your plugins:
     4) molokai              11) tlib_vim            18) vim-repeat
     5) pydiction            12) vcscommand          19) vim-snipmate
     6) python-mode          13) vim-addon-mw-utils  20) vim-surround
-    7) snipmate-snippets    14) vim-jade            21) ZenCoding
+    7) snipmate-snippets    14) vim-go              21) ZenCoding
     Enter the number of the plugin you wish to uninstall:
 
 Press `1` to cancel and go back to the main menu or `2` to remove all of your plugins at once.
@@ -100,6 +100,10 @@ copy the updated vimogen file to your PATH to have the latest version. Do the sa
 vim-pathogen.
 
 ## FAQ
+
+> Can I use vimogen with non-bash shells?
+
+Yes. All you need is bash to be *installed*, but you can use whatever shell you want. For instance, I use it with the zsh shell. The script uses the shebang path `#!/bin/bash`. Change it if your bash is installed somewhere else.
 
 > Can Vimogen install Vim color schemes, like Molokai?__
 
