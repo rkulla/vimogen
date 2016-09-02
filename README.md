@@ -35,7 +35,7 @@ Add Git URLs to `~/.vimogen_repos`--one line at a time--like:
     
     https://github.com/tpope/vim-sensible
     https://github.com/tpope/vim-surround
-    https://github.com/scrooloose/nerdtree
+    https://github.com/fatih/vim-go
     https://github.com/tomasr/molokai
     ...
 
