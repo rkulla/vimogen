@@ -1,6 +1,6 @@
 #!/bin/bash
 # vimogen by Ryan Kulla <rkulla@gmail.com>
-# version 1.4.2
+# version 1.4.3
 # License: Vim License. See :help license
 
 # If any command fails, abort the script
@@ -80,7 +80,7 @@ install() {
             clone_dir="${clone_dir%.vim}" # take out the .vim
         fi
         if [[ ! -d "$install_dir/$clone_dir" ]]; then
-            local gitclone=$(git clone "$line" "$clone_dir" 2>&1 | awk 'NR==2;END{print}')
+            local gitclone=$(git clone --depth 3 "$line" "$clone_dir" 2>&1 | awk 'NR==2;END{print}')
             install_count=$(( install_count+1 ))
             printf "%s\n" "$gitclone"
         fi

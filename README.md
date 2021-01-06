@@ -56,7 +56,8 @@ It will give you a menu of items to choose from:
 For example, typing `1` will install all the plugins listed in .vimogen_repos.
 
 Choosing __INSTALL__ clones all the repos from .vimogen_repos into your Pathogen dir (~/.vim/bundle).
-Skipping ones that already exist. 
+Skipping ones that already exist.  It uses a shallow clone (of depth 3) to help conserve disk space while still
+providing flexibilty if you need to checkout a slightly older commit.
 
 Note: You can append new plugin repos to the .vimogen_repos file later and install them incrementally by re-running Vimogen's install command.
 
