@@ -112,8 +112,8 @@ vim-pathogen.
 
 > __Why depend on Pathogen when Vim8+ supports native packages?__
 
-  I find that this dependency is actually simpler because native packages require would require
-  vimogen to manage a list of plugins that go into start/ and opt/ folders instead of just one
+  I find that this dependency is actually simpler because native packages would require that
+  Vimogen manage a list of plugins that go into both start/ and opt/ folders, instead of just one
   bundle/ directory. Pathogen can manage optional packages and still takes up very little of vimrc:
 
     if has("gui_running") " list plugins to disable if GUI Vim is running
