@@ -110,24 +110,19 @@ vim-pathogen.
 
 ## FAQ
 
-> Does vimogen support git submodules?
+> __Does vimogen support git submodules?__
 
   It depends what you mean. It supports plugins that support submodules (it will init and update them).
   However, if your .vim/ is in a git repo (as in dotfiles repo) and you installed vim plugins through
-  submodules, then no. The latter case wouldn't require vimogen, or pathogen for that matter since you 
-  could just use vim8's native packaging.  However, I find packages as submodules to be less convenient.
+  submodules, then no. I find packages as submodules to be less convenient to use than vimogen.
   Instead I just commit the .vimogen_repos file to my dotfiles repo.
 
-> Can I use vimogen with non-bash shells?
-
-Yes. All you need is bash to be *installed*, but you can use whatever shell you want. For instance, I use it with the zsh shell. The script uses the shebang path `#!/bin/bash`. Change it if your bash is installed somewhere else.
-
-> Can Vimogen install Vim color schemes, like Molokai?__
+> __Can Vimogen install Vim color schemes, like Molokai?__
 
 Yes. Anything that works with Pathogen (which is almost everything)
 will work with Vimogen.
 
-> I downloaded a Vim plugin as a .zip file. What should I do?__
+> __I downloaded a Vim plugin as a .zip file. What should I do?__
 
 Vimogen doesn't use zip files, it uses git repos. All of
 the plugins from vim.org are mirrored on https://github.com/vim-scripts so
@@ -135,7 +130,7 @@ find it on there and put its github clone URL into ~/.vimogen_repos. If
 a plugin you want is not mirrored, it's probably still somewhere on Github
 or somewhere if you search.
 
-> I already use Dropbox (or similar) to keep my .vim/ directory synchronized. 
+> __I already use Dropbox (or similar) to keep my .vim/ directory synchronized. 
 Why should I use Vimogen?__
 
 Even if you've created a symlink from ~/.vim/ to ~/Dropbox/path/to/.vim/, that
