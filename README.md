@@ -110,12 +110,25 @@ vim-pathogen.
 
 ## FAQ
 
+> __Why depend on Pathogen when Vim8+ supports native packages?__
+
+  I find that this dependency is actually simpler because native packages require would require
+  vimogen to manage a list of plugins that go into start/ and opt/ folders instead of just one
+  bundle/ directory. Pathogen can manage optional packages and still takes up very little of vimrc:
+
+    if has("gui_running") " list plugins to disable if GUI Vim is running
+      let g:pathogen_disabled = []
+      call add(g:pathogen_disabled, 'coc')
+    endif
+    execute pathogen#infect() 
+
 > __Does vimogen support git submodules?__
 
   It depends what you mean. It supports plugins that support submodules (it will init and update them).
   However, if your .vim/ is in a git repo (as in dotfiles repo) and you installed vim plugins through
   submodules, then no. I find packages as submodules to be less convenient to use than vimogen.
-  Instead I just commit the .vimogen_repos file to my dotfiles repo.
+  Instead I just commit the .vimogen_repos file to my dotfiles repo.  This allows me to gitignore my
+  entire plugin directory, which is cleaner than committing it with submodule references to all plugins.
 
 > __Can Vimogen install Vim color schemes, like Molokai?__
 
