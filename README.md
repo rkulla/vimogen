@@ -122,15 +122,17 @@ vim-pathogen.
     endif
     execute pathogen#infect() 
 
+  And Pathogen will "just work" on any of your Vim installs.
+
 > __Does vimogen support git submodules?__
 
-  It depends what you mean. It supports plugins that support submodules (it will init and update them).
+  Vimogen supports _plugins_ that support submodules (it will init and update them).
   However, if your .vim/ is in a git repo (as in dotfiles repo) and you installed vim plugins through
   submodules, then no. I find packages as submodules to be less convenient to use than vimogen.
   Instead I just commit the .vimogen_repos file to my dotfiles repo.  This allows me to gitignore my
   entire plugin directory, which is cleaner than committing it with submodule references to all plugins.
 
-> __Can Vimogen install Vim color schemes, like Molokai?__
+> __Can Vimogen manage Vim color schemes?__
 
 Yes. Anything that works with Pathogen (which is almost everything)
 will work with Vimogen.
