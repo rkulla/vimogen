@@ -2,15 +2,13 @@
 
 Vimogen is a command-line utility that installs, updates or removes <a href="http://www.vim.org/">Vim</a> plugins. It can also keep your plugins synchronized across multiple Vim installs. Just run `vimogen update` and you've updated all of your vim plugins to the latest versions.
 
-No difficult commands to remember and no configuration required, just a text file with a list of Git repository URLs to the plugins you use. Vimogen uses <a href="https://github.com/tpope/vim-pathogen/">Pathogen</a> which lets you store all of your plugins in one place, as Git checkouts.
+No difficult commands to remember and no configuration required, beyond a simple text file consisting of a list of Git repository URLs to the plugins you use. Vimogen uses <a href="https://github.com/tpope/vim-pathogen/">Pathogen</a> which lets you store all of your plugins in one place, as Git checkouts. (Vimogen is needed because Pathogen alone isn't a plugin manager).
 
 Motivation: Many plugins that I use (vim-go, syntastic, etc.) get updated a lot and I wanted an easy way to keep my copies updated. I also wanted a better way to install all of my favorite plugins at once whenever I install a new operating system. The alternatives either didn't use Git or required configuration and other stuff I didn't like. 
 
-With Vimogen, you can use the same `.vimrc` across multiple machines, but have separate manifest files for each machine. This is useful if you don't want to use development plugins on a production machine, and so on.
+Unlike the popular `vim-plug` manager, vimogen keeps your vimrc file smaller, as you put your plugin list in a separate file (.vimogen_repos) rather than inside your vimrc. This was a major design intention of vimogen.
 
-Don't worry, finding Git URLs for all of your plugins is actually very easy 
-because vim.org mirrors them all on Github <a href="https://github.com/vim-scripts">here</a>.
-You can also use Bitbucket or any other Git repository location if you need to.
+In fact, with Vimogen you can use the same `.vimrc` across multiple machines, but have separate manifest files for each machine. This is useful if you don't want to use development plugins on a production machine, and so on.  Don't worry, finding Git URLs for all of your plugins is actually very easy because vim.org mirrors them all on Github <a href="https://github.com/vim-scripts">here</a>.  You can also use Bitbucket or any other Git repository location if you need to.
 
 ## Requirements
 
@@ -59,6 +57,8 @@ Choosing __INSTALL__ clones all the repos from .vimogen_repos into your Pathogen
 Skipping ones that already exist.  It uses a shallow clone (of depth 3) to help conserve disk space while still
 providing flexibilty if you need to checkout a slightly older commit.
 
+After it clones it also installs any submodules the repo may have.
+
 Note: You can append new plugin repos to the .vimogen_repos file later and install them incrementally by re-running Vimogen's install command.
 
 Choosing `2` to __UNINSTALL__ gives you a list of all your plugins:
@@ -74,7 +74,7 @@ Choosing `2` to __UNINSTALL__ gives you a list of all your plugins:
 
 Press `1` to cancel and go back to the main menu or `2` to remove all of your plugins at once.
     
-Choosing `3` to __UPDATE__ runs a `git pull` on all of your bundles:
+Choosing `3` to __UPDATE__ runs a `git pull` and updates any submodules on all of your bundles:
 
 ![update](https://cloud.githubusercontent.com/assets/244283/17818417/5505c364-65f8-11e6-8dfc-0797c96cd06b.png)
 
@@ -101,6 +101,14 @@ copy the updated vimogen file to your PATH to have the latest version. Do the sa
 vim-pathogen.
 
 ## FAQ
+
+> Does vimogen support git submodules?
+
+  It depends what you mean. It supports plugins that support submodules (it will init and update them).
+  However, if your .vim/ is in a git repo (as in dotfiles repo) and you installed vim plugins through
+  submodules, then no. The latter case wouldn't require vimogen, or pathogen for that matter since you 
+  could just use vim8's native packaging.  However, I find packages as submodules to be less convenient.
+  Instead I just commit the .vimogen_repos file to my dotfiles repo.
 
 > Can I use vimogen with non-bash shells?
 

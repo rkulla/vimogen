@@ -1,6 +1,6 @@
 #!/bin/bash
 # vimogen by Ryan Kulla <rkulla@gmail.com>
-# version 1.4.3
+# version 1.4.2
 # License: Vim License. See :help license
 
 # If any command fails, abort the script
@@ -83,6 +83,11 @@ install() {
             local gitclone=$(git clone --depth 3 "$line" "$clone_dir" 2>&1 | awk 'NR==2;END{print}')
             install_count=$(( install_count+1 ))
             printf "%s\n" "$gitclone"
+
+            # install any submodules
+            cd "$clone_dir"
+            git submodule update --init --recursive
+            cd ..
         fi
     done < "$manifest_file"
 
@@ -179,6 +184,9 @@ update() {
         if [[ $pull != *"Already up-to-date"* ]]; then
             updated=1
             printf "%s\n\n" "$pull"
+            # Update any submodules
+            git submodule update --init --recursive
+            git submodule sync --recursive
         fi
 
         if [[ $pull = *vimogen* && $pull != *"Already up-to-date"* ]]; then
@@ -186,7 +194,7 @@ update() {
         fi
 
         if [[ $pull = *pathogen* && $pull != *"Already up-to-date"* ]]; then
-            MSG+="\nPathogen was updated. You should cp $install_dir/vim-pathogen/autoload/pathogen.vim ~/.vim/autoload/"
+            MSG+="\nPathogen was updated. You should cp $install_dir/vim-pathogen/bundle/pathogen.vim ~/.vim/autoload/"
         fi
 
         popd > /dev/null
