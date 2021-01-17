@@ -1,6 +1,6 @@
 #!/bin/bash
 # vimogen by Ryan Kulla <rkulla@gmail.com>
-# version 1.4.2
+# version 1.4.4
 # License: Vim License. See :help license
 
 # If any command fails, abort the script
