@@ -30,12 +30,20 @@ Then run:
 ## Usage
 
 Add Git URLs to `~/.vimogen_repos`--one line at a time--like:
+
+    # Color Scheme
+    https://github.com/romainl/Apprentice
     
-    https://github.com/tpope/vim-sensible
-    https://github.com/tpope/vim-surround
-    https://github.com/fatih/vim-go
-    https://github.com/tomasr/molokai
+    # Snippets
+    https://github.com/honza/vim-snippets
+    https://github.com/jhkersul/vim-jest-snippets
+
+    # Linting
+    https://github.com/w0rp/ale
+    https://github.com/scrooloose/syntastic
     ...
+
+Note how comments (lines starting with #) and blank lines are allowed for organization.
 
 (<a href="https://github.com/vim-scripts">Find github hosted Vim plugin URLs here</a>)
 
