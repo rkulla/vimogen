@@ -12,7 +12,7 @@ In fact, with Vimogen you can use the same `.vimrc` across multiple machines, bu
 
 ## Requirements
 
-* A unix-like operating system (Linux, OS X, etc. with bash installed)
+* A Unix-like operating system (Linux, MacOS, etc., with Bash installed)
 * The Vim plug-in: [Pathogen](https://github.com/tpope/vim-pathogen/ "Pathogen")
 
 ## Installation
@@ -63,7 +63,7 @@ For example, typing `1` will install all the plugins listed in .vimogen_repos.
 
 Choosing __INSTALL__ clones all the repos from .vimogen_repos into your Pathogen dir (~/.vim/bundle).
 Skipping ones that already exist.  It uses a shallow clone (of depth 3) to help conserve disk space while still
-providing flexibilty if you need to checkout a slightly older commit.
+providing flexibility if you need to checkout a slightly older commit.
 
 After it clones it also installs any submodules the repo may have.
 
