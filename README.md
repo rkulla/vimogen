@@ -12,7 +12,7 @@ In fact, with Vimogen you can use the same `.vimrc` across multiple machines, bu
 
 ## Requirements
 
-* A Unix-like operating system (Linux, MacOS, etc., with Bash installed)
+* A Unix-like operating system (Linux, MacOS, etc., with Bash, Perl and Git installed)
 * The Vim plug-in: [Pathogen](https://github.com/tpope/vim-pathogen/ "Pathogen")
 
 ## Installation
@@ -24,17 +24,8 @@ Alternatively, vimogen will auto-generate `$HOME/.vimogen_repos` if you run it w
 Then run:
 
     $ git clone https://github.com/rkulla/vimogen
-    $ cd vimogen
-
-Then copy the vimogen script to your $PATH. I like to do this as:
-
-    $ mkir ~/bin
-    $ cp vimogen ~/bin
-
-then in your shell config (e.g., ~/.bashrc or ~/.zshrc) add:
-
-    PATH="$HOME/bin:$PATH"
-    export PATH
+    $ chmod u+x vimogen
+    $ cp vimogen to your $PATH
 
 ## Usage
 
