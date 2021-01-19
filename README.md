@@ -24,8 +24,17 @@ Alternatively, vimogen will auto-generate `$HOME/.vimogen_repos` if you run it w
 Then run:
 
     $ git clone https://github.com/rkulla/vimogen
-    $ chmod u+x vimogen
-    $ cp vimogen to your $PATH
+    $ cd vimogen
+
+Then copy the vimogen script to your $PATH. I like to do this as:
+
+    $ mkir ~/bin
+    $ cp vimogen ~/bin
+
+then in your shell config (e.g., ~/.bashrc or ~/.zshrc) add:
+
+    PATH="$HOME/bin:$PATH"
+    export PATH
 
 ## Usage
 
