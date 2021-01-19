@@ -10,32 +10,6 @@ Unlike the popular `vim-plug` and `vundle' managers, vimogen keeps your vimrc fi
 
 In fact, with Vimogen you can use the same `.vimrc` across multiple machines, but have separate manifest files for each machine. This is useful if you don't want to use development plugins on a production machine, and so on.  Don't worry, finding Git URLs for all of your plugins is actually very easy because vim.org mirrors them all on Github <a href="https://github.com/vim-scripts">here</a>.  You can also use Bitbucket or any other Git repository location if you need to.
 
-## Requirements
-
-* A Unix-like operating system (Linux, MacOS, etc., with Bash, Perl and Git installed)
-* The Vim plug-in: [Pathogen](https://github.com/tpope/vim-pathogen/ "Pathogen")
-
-## Installation
-
-Create a text file called `$HOME/.vimogen_repos` and add a list of Git URLs to the Vim plugin repositories you use, one URL per line. Vim.org mirrors them all plugins to Github <a href="https://github.com/vim-scripts">here</a>. See [my .vimogen_repos file](https://github.com/rkulla/vimrc/blob/master/.vimogen_repos) for an example.
-
-Alternatively, vimogen will auto-generate `$HOME/.vimogen_repos` if you run it without creating the file first. It generates based off the current Pathogen bundles you already have. This allows you to update or uninstall any existing plugins you have. You'll only need to edit .vimogen_repos yourself when you want to add more plugins.
-
-Then run:
-
-    $ git clone https://github.com/rkulla/vimogen
-    $ cd vimogen
-
-Then copy the vimogen script to your $PATH. I like to do this as:
-
-    $ mkdir ~/bin
-    $ cp vimogen ~/bin
-
-then in your shell config (e.g., ~/.bashrc or ~/.zshrc) add:
-
-    PATH="$HOME/bin:$PATH"
-    export PATH
-
 ## Usage
 
 Add Git URLs to `~/.vimogen_repos`--one line at a time--like:
@@ -106,6 +80,33 @@ To output the current contents of your .vimogen_repos file, add the 'heap' argum
     $ vimogen heap
 
 For more verbose output, use the `-v` flag (not recommended for normal use).
+
+## Requirements
+
+* A Unix-like operating system (Linux, MacOS, etc., with Bash, Perl and Git installed)
+* The Vim plug-in: [Pathogen](https://github.com/tpope/vim-pathogen/ "Pathogen")
+
+## Installation
+
+Create a text file called `$HOME/.vimogen_repos` and add a list of Git URLs to the Vim plugin repositories you use, one URL per line. Vim.org mirrors them all plugins to Github <a href="https://github.com/vim-scripts">here</a>. See [my .vimogen_repos file](https://github.com/rkulla/vimrc/blob/master/.vimogen_repos) for an example.
+
+Alternatively, vimogen will auto-generate `$HOME/.vimogen_repos` if you run it without creating the file first. It generates based off the current Pathogen bundles you already have. This allows you to update or uninstall any existing plugins you have. You'll only need to edit .vimogen_repos yourself when you want to add more plugins.
+
+Then run:
+
+    $ git clone https://github.com/rkulla/vimogen
+    $ cd vimogen
+
+Then copy the vimogen script to your $PATH. I like to do this as:
+
+    $ mkdir ~/bin
+    $ cp vimogen ~/bin
+
+then in your shell config (e.g., ~/.bashrc or ~/.zshrc) add:
+
+    PATH="$HOME/bin:$PATH"
+    export PATH
+
 
 ## Tips
 
