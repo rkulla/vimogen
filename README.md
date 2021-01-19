@@ -1,12 +1,12 @@
 # vimogen
 
-Vimogen is a command-line utility that installs, updates or removes <a href="http://www.vim.org/">Vim</a> plugins. It can also keep your plugins synchronized across multiple Vim installs. Just run `vimogen update` and you've updated all of your vim plugins to the latest versions.
+Vimogen is a menu-based command-line utility that installs, updates or removes <a href="http://www.vim.org/">Vim</a> plugins. It can also keep your plugins synchronized across multiple Vim installs. Just run `vimogen update` and you've updated all of your vim plugins to the latest versions.
 
 No difficult commands to remember and no configuration required, beyond a simple text file consisting of a list of Git repository URLs to the plugins you use. Vimogen uses <a href="https://github.com/tpope/vim-pathogen/">Pathogen</a> which lets you store all of your plugins in one place, as Git checkouts. (Vimogen is needed because Pathogen alone isn't a plugin manager).
 
 Motivation: Many plugins that I use (vim-go, syntastic, etc.) get updated a lot and I wanted an easy way to keep my copies updated. I also wanted a better way to install all of my favorite plugins at once whenever I install a new operating system. The alternatives either didn't use Git or required configuration and other stuff I didn't like. 
 
-Unlike the popular `vim-plug` manager, vimogen keeps your vimrc file smaller, as you put your plugin list in a separate file (.vimogen_repos) rather than inside your vimrc. This was a major design intention of vimogen.
+Unlike the popular `vim-plug` and `vundle' managers, vimogen keeps your vimrc file smaller, as you put your plugin list in a separate file (.vimogen_repos) rather than inside your vimrc. This was a major design intention of vimogen.
 
 In fact, with Vimogen you can use the same `.vimrc` across multiple machines, but have separate manifest files for each machine. This is useful if you don't want to use development plugins on a production machine, and so on.  Don't worry, finding Git URLs for all of your plugins is actually very easy because vim.org mirrors them all on Github <a href="https://github.com/vim-scripts">here</a>.  You can also use Bitbucket or any other Git repository location if you need to.
 
