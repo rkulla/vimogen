@@ -1,6 +1,6 @@
 # vimogen
 
-Vimogen is a menu-based command-line utility that installs, updates or removes <a href="http://www.vim.org/">Vim</a> plugins. It can also keep your plugins synchronized across multiple Vim installs. Just run `vimogen update` and you've updated all of your vim plugins to the latest versions.
+Vimogen is a shell script with a menu interface that installs, updates or removes <a href="http://www.vim.org/">Vim</a> plugins. It can also keep your plugins synchronized across multiple Vim installs. Just run `vimogen update` and you've updated all of your vim plugins to the latest versions.
 
 No difficult commands to remember and no configuration required, beyond a simple text file consisting of a list of Git repository URLs to the plugins you use. Vimogen uses <a href="https://github.com/tpope/vim-pathogen/">Pathogen</a> which lets you store all of your plugins in one place, as Git checkouts. (Vimogen is needed because Pathogen alone isn't a plugin manager).
 
@@ -85,7 +85,7 @@ For more verbose output, use the `-v` flag (not recommended for normal use).
 
 ## Requirements
 
-* A Unix-like operating system (Linux, MacOS, etc., with Bash, Perl and Git installed)
+* A Unix-like operating system (Linux, MacOS, etc)
 * The Vim plug-in: [Pathogen](https://github.com/tpope/vim-pathogen/ "Pathogen")
 
 ## Installation
