@@ -118,7 +118,7 @@ then whenever you want it back just run vimogen's INSTALL again.
 - Keep a reference to the vimogen repository in .vimogen_repos and it will show you
 if a new version was updated whenever you run the update command. Then all you have to do is
 copy the updated vimogen file to your PATH to have the latest version. Do the same for
-vim-pathogen.
+vim-pathogen.  Alternatively, just use symlinks.
 
 ## FAQ
 
