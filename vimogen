@@ -198,7 +198,7 @@ update() {
         fi
 
         if [[ $pull = *pathogen* && $pull != *"Already up-to-date"* ]]; then
-            MSG+="\nPathogen was updated. You should cp $install_dir/vim-pathogen/bundle/pathogen.vim ~/.vim/autoload/"
+            MSG+="\nPathogen was updated. You should cp $install_dir/vim-pathogen/autoload/pathogen.vim ~/.vim/autoload/"
         fi
 
         popd > /dev/null
