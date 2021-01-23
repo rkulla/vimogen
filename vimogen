@@ -193,11 +193,11 @@ update() {
             git submodule sync --recursive
         fi
 
-        if [[ $pull = *vimogen* && $pull != *"Already up-to-date"* ]]; then
+        if [[ $pull = *vimogen* && $pull != *"Already up"* ]]; then
             MSG+="\nVimogen was updated! You should cp $install_dir/vimogen/vimogen to your \$PATH"
         fi
 
-        if [[ $pull = *pathogen* && $pull != *"Already up-to-date"* ]]; then
+        if [[ $pull = *pathogen* && $pull != *"Already up"* ]]; then
             MSG+="\nPathogen was updated. You should cp $install_dir/vim-pathogen/autoload/pathogen.vim ~/.vim/autoload/"
         fi
 
