@@ -56,12 +56,12 @@ Note: You can append new plugin repos to the .vimogen_repos file later and insta
 
 Choosing `2` to __UNINSTALL__ gives you a list of all your plugins:
 
-    1) BACK                  8) python-mode         15) vim-rhubarb
-    2) ALL                   9) rainbow             16) vim-pathogen
-    3) coc                  10) syntastic           17) vim-prettier
+    1) BACK                  8) python-mode         15) vim-go
+    2) ALL                   9) rainbow             16) vim-node
+    3) coc                  10) syntastic           17) vim-qf
     4) fzf                  11) tagbar              18) vim-rails
     5) indentLine           12) tComment            19) vim-repeat
-    6) nerdtree             13) vim-dispatch        20) vim-surround
+    6) nerdtree             13) vim-dispatch        20) vim-rhubarb
     7) nerdtree-git-plugin  14) vim-fugitive        21) vimogen
     Enter the number of the plugin you wish to uninstall:
 
